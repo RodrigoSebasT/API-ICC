@@ -6,9 +6,9 @@
 
 - ### Volumen de un cubo:
     #### URL
-    /cube/volumen/s
+    http://127.0.0.1:8080/cubo/volumen/:s
 
-    #### Parametros
+    #### Parámetros
     - s: Lado del cubo
 
     #### Salida
@@ -20,24 +20,25 @@
   
     ![](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/cuboReadmeVolumen.png)
 
-- ### Área de superficie de un cubo:
+- ### Área superficial de un cubo:
     #### URL
-    /cube/surfacearea/s
-
+    http://127.0.0.1:8080/cubo/surfacearea/:s
+    
     #### Parametros
     - s: Lado del cubo
 
     #### Salida
-    Área de superficie de un cubo
+    Área superficial de un cubo
 
     #### Ejemplo
 
-    - URL: http://127.0.0.1:8080/cube/surfacearea/5/9
-    ![This is an image]()
+    - URL: http://127.0.0.1:8080/cubo/surfacearea/5
+    
+    ![This is an image](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/cuboReadmeArea.png)
 
 - ### Volumen de un sólido rectangular:
     #### URL
-    /rectangular_solid/volume/l/w/h
+    /figurageometrica/rectangular_solid/volume/l/w/h
 
     #### Parametros
     - l: Largo del solido rectangular
@@ -49,12 +50,12 @@
 
     #### Ejemplo
 
-    - URL: http://127.0.0.1:8080/rectangular_solid/volume/l/w/h
+    - URL: localhost:9000/figurageometrica/rectangular_solid/volume/l/w/h
     ![This is an image]()
 
 - ### Área de superficie de un solido rectangular:
     #### URL
-    /rectangular_solid/surfacearea/l/w/h
+    figurageometrica/rectangular_solid/surfacearea/l/w/h
 
     #### Parametros
     - l: Largo del solido rectangular
@@ -66,12 +67,12 @@
 
     #### Ejemplo
 
-    - URL: http://127.0.0.1:8080/rectangular_solid/surfacearea/8/5/4
+    - URL: localhost:9000/figurageométrica/rectangular_solid/surfacearea/8/5/4
     ![This is an image]()
 
 - ### Volumen de una esfera:
     #### URL
-    /sphere/volume/r
+    /figurageometrica/sphere/volume/r
 
     #### Parametros
     - r: Radio de la esfera
@@ -81,12 +82,12 @@
 
     #### Ejemplo
 
-    - URL: http://127.0.0.1:8080/sphere/volume/l/w/h
+    - URL: localhost:9000/figurageometrica/sphere/volume/l/w/h
     ![This is an image]()
 
 - ### Área de superficie de una esfera:
     #### URL
-    /sphere/surfacearea/l/w/h
+    figurageometrica/sphere/surfacearea/l/w/h
 
     #### Parametros
     - r: Radio de la esfera
@@ -96,12 +97,12 @@
 
     #### Ejemplo
 
-    - URL: http://127.0.0.1:8080/sphere/surfacearea/6
+    - URL: localhost:9000/figurageométrica/sphere/surfacearea/6
     ![This is an image]()
 
  - ### Volumen de un cilindro circular recto:
     #### URL
-    /right_circular_cylinder/volume/r/h
+    /figurageometrica/right_circular_cylinder/volume/r/h
 
     #### Parametros
     - r: Radio del cilindro circular recto
@@ -112,12 +113,12 @@
 
     #### Ejemplo
 
-    - URL: http://127.0.0.1:8080/right_circular_cylinder/volume/l/w/h
+    - URL: localhost:9000/figurageometrica/right_circular_cylinder/volume/l/w/h
     ![This is an image]()
 
 - ### Área de superficie de un cilindro circular recto:
     #### URL
-    /right_circular_cylinder/surfacearea/r/h
+    /figurageometrica/right_circular_cylinder/surfacearea/r/h
 
     #### Parametros
     - r: Radio del cilindro circular recto
@@ -128,13 +129,13 @@
 
     #### Ejemplo
 
-    - URL: http://127.0.0.1:8080/right_circular_cylinder/surfacearea/3
+    - URL: localhost:9000/figurageométrica/right_circular_cylinder/surfacearea/3
     ![This is an image]()
 
 
  - ### Volumen de un torus:
     #### URL
-    /torus/volume/r/R
+    /figurageometrica/torus/volume/r/R
 
     #### Parametros
     - r: Radio del tubo
@@ -145,12 +146,12 @@
 
     #### Ejemplo
 
-    - URL: http://127.0.0.1:8080/torus/volume/l/w/h
+    - URL: localhost:9000/figurageometrica/torus/volume/l/w/h
     ![This is an image]()
 
 - ### Área de superficie de un cilindro circular derecho:
     #### URL
-    /torus/surfacearea/r/R
+    /figurageometrica/torus/surfacearea/r/R
 
     #### Parametros
     - r: Radio del tubo
@@ -161,13 +162,13 @@
 
     #### Ejemplo
 
-    - URL: http://127.0.0.1:8080/torus/surfacearea/3
-    ![This is an image]()
+    - URL: localhost:9000/figurageométrica/torus/surfacearea/3
+    - Salida: 27 (o screenshot de la salida en caso existan gráficos)
 
 
  - ### Volumen general de un cono o pirámide:
     #### URL
-    /general_cone_or_pyramid/volume/a/h
+    /figurageometrica/general_cone_or_pyramid/volume/a/h
 
     #### Parametros
     - a: Área de la base del cono o pirámide
@@ -178,12 +179,12 @@
 
     #### Ejemplo
 
-    - URL: http://127.0.0.1:8080/general_cone_or_pyramid/volume/l/w/h
+    - URL: localhost:9000/figurageometrica/general_cone_or_pyramid/volume/l/w/h
     ![This is an image]()
 
  - ### Volumen general de un cono circular recto:
     #### URL
-    /right_circular_cone/volume/r/h
+    /figurageometrica/right_circular_cone/volume/r/h
 
     #### Parametros
     - r: Radio del cono circular
@@ -194,12 +195,12 @@
 
     #### Ejemplo
 
-    - URL: http://127.0.0.1:8080/right_circular_cone/volume/l/w/h
+    - URL: localhost:9000/figurageometrica/right_circular_cone/volume/l/w/h
     ![This is an image]()
 
 - ### Área de superficie de un cono circular recto:
     #### URL
-    /right_circular_cone/surfacearea/r/h
+    /figurageometrica/right_circular_cone/surfacearea/r/h
 
     #### Parametros
     - r: Radio del cono circular recto
@@ -210,12 +211,12 @@
 
     #### Ejemplo
 
-    - URL: http://127.0.0.1:8080/right_circular_cone/surfacearea/3
+    - URL: localhost:9000/figurageométrica/right_circular_cone/surfacearea/3
     ![This is an image]()
 
  - ### Volumen general de un cono truncado:
     #### URL
-    /frustum_of_a_cone/volume/r/R/h
+    /figurageometrica/frustum_of_a_cone/volume/r/R/h
 
     #### Parametros
     - r: Radio superior del cono truncado
@@ -227,12 +228,12 @@
 
     #### Ejemplo
 
-    - URL: http://127.0.0.1:8080/frustum_of_a_cone/volume/l/w/h
+    - URL: localhost:9000/figurageometrica/frustum_of_a_cone/volume/l/w/h
     ![This is an image]()
 
 - ### Área de superficie de un cono truncado:
     #### URL
-    /frustum_of_a_cone/surfacearea/r/R/s
+    /figurageometrica/frustum_of_a_cone/surfacearea/r/R/s
 
     #### Parametros
     - r: Radio superior del cono truncado
@@ -244,12 +245,12 @@
 
     #### Ejemplo
 
-    - URL: http://127.0.0.1:8080/frustum_of_a_cone/surfacearea/3
+    - URL: localhost:9000/figurageométrica/frustum_of_a_cone/surfacearea/3
     ![This is an image]()
 
  - ### Volumen general de una pirámide cuadrada:
     #### URL
-    /square_pyramid/volume/s/h
+    /figurageometrica/square_pyramid/volume/s/h
 
     #### Parametros
     - s: Lado de la pirámide cuadrada
@@ -260,12 +261,12 @@
 
     #### Ejemplo
 
-    - URL: http://127.0.0.1:8080/square_pyramid/volume/l/w/h
+    - URL: localhost:9000/figurageometrica/square_pyramid/volume/l/w/h
     ![This is an image]()
 
 - ### Área de superficie de un square_pyramid:
     #### URL
-    /square_pyramid/surfacearea/s/h
+    /figurageometrica/square_pyramid/surfacearea/s/h
 
     #### Parametros
     - s: Lado de la pirámide cuadrada
@@ -276,12 +277,12 @@
 
     #### Ejemplo
 
-    - URL: http://127.0.0.1:8080/square_pyramid/surfacearea/3
+    - URL: localhost:9000/figurageométrica/square_pyramid/surfacearea/3
     ![This is an image]()
 
  - ### Volumen general de un tetrahedro regular:
     #### URL
-    /regular_tetrahedron/volume/s
+    /figurageometrica/regular_tetrahedron/volume/s
 
     #### Parametros
     - s:  lado del tetrahedro regular
@@ -291,12 +292,12 @@
 
     ##### Ejemplo
 
-    - URL: http://127.0.0.1:8080/regular_tetrahedron/volume/l/w/h
+    - URL: localhost:9000/figurageometrica/regular_tetrahedron/volume/l/w/h
     -![This is an image]()
 
 - ### Área de superficie de un square_pyramid:
     #### URL
-    /regular_tetrahedron/surfacearea/s
+    /figurageometrica/regular_tetrahedron/surfacearea/s
 
     #### Parametros
     - s: Lado del tetrahedro regular
@@ -306,6 +307,6 @@
 
     #### Ejemplo
 
-    - URL: http://127.0.0.1:8080/regular_tetrahedron/surfacearea/3
+    - URL: localhost:9000/figurageométrica/regular_tetrahedron/surfacearea/3
     ![This is an image]()
 
