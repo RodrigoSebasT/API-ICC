@@ -378,59 +378,60 @@ def rectangular_solid_volume(l,w,h):
     volumen = int(l)*int(w)*int(h)
 
     return """
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/solidoRectangular.css">
-    <style>
-        * {
-            background-color: black;
-            color: white;
-        }
-        .container {
-            position: relative;
-        }
-        .container img {
-            position: absolute;
-            left: 400px;
-            top:5px;
-            border-radius: 30px;
-            width: 350px;
-            height: 300px;
-            background-color:white;
-        }
-        .container .title {
-            position: relative;
-            top: 40px;
-            font-size: 20px;
-            width: 280px;
-            padding: 15px;
-            left: 10px;
-            border: 2px solid white;
-            border-radius: 20px;
-            text-align: center;
-        }
-        
-    </style>
-</head>
+            <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+        </head>
+        <body>
+            <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+            <link rel="stylesheet" href="../css/solidoRectangular.css">
+            <style>
+                * {
+                    background-color: black;
+                    color: white;
+                    font-family: 'Roboto', sans-serif;
+                }
+                .container {
+                    position: relative;
+                }
+                .container img {
+                    position: absolute;
+                    left: 440px;
+                    top:15px;
+                    border-radius: 30px;
+                    width: 350px;
+                    height: 300px;
+                    background-color:white;
+                }
+                .container .title {
+                    position: relative;
+                    top: 20px;
+                    font-size: 20px;
+                    width: 360px;
+                    padding: 15px;
+                    left: 10px;
+                    border: 2px solid white;
+                    border-radius: 20px;
+                    text-align: center;
+                }
+                
+            </style>
+        </head>
 
-<body>
-    <div class="container">
-        <img src="https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/solidoRectangular.png" alt="">
-        <p class="title">"""+"""l = {}<br>w = {}<br>h = {}<br>El volumen del sólido rectangular es: {}</p>""".format(int(l),int(w),int(h),volumen)+"""</div>
-</body>
-</html>"""
+        <body>
+            <div class="container">
+                <img src="https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/solido.png" alt="">
+                <p class="title">"""+"""a = {}<br>w = {}<br>h = {}<br><br>Donde:<br>a: largo del sólido rectangular<br>w: ancho del sólido rectangular<br>h: altura del sólido rectangular<br><br>El volumen del sólido rectangular es: {}</p>""".format(int(l),int(w),int(h),volumen)+"""</div>
+        </body>
+        </html>"""
 
 
 
@@ -442,12 +443,112 @@ def rectangular_solid_volume(l,w,h):
     #return(f"El volumen de rectangular_solid es:  {str(volume)}")
 
 #surfacearea rectangular_solid
-@app.route('/figurageometrica/rectangular_solid/surfacearea/<l>/<w>/<h>', methods=['GET'])
+@app.route('/solidoRectangular/surfacearea/<l>/<w>/<h>', methods=['GET'])
 def rectangular_solid_surfacearea(l,w,h):
-
     surfacearea = 2*(int(l)*int(w) + int(h)*int(l) + int(w)*int(h))
-    return(f"La surfacearea de rectangular_solid es:  {str(surfacearea)}")
 
+    return """
+                <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Document</title>
+            </head>
+            <body>
+                <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Document</title>
+                <link rel="stylesheet" href="../css/solidoRectangular.css">
+                <style>
+                    * {
+                        background-color: black;
+                        color: white;
+                        font-family: 'Roboto', sans-serif;
+                    }
+                    .container {
+                        position: relative;
+                    }
+                    .container img {
+                        position: absolute;
+                        left: 440px;
+                        top:15px;
+                        border-radius: 30px;
+                        width: 350px;
+                        height: 300px;
+                        background-color:white;
+                    }
+                    .container .title {
+                        position: relative;
+                        top: 20px;
+                        font-size: 20px;
+                        width: 360px;
+                        padding: 15px;
+                        left: 10px;
+                        border: 2px solid white;
+                        border-radius: 20px;
+                        text-align: center;
+                    }
+                    
+                </style>
+            </head>
+
+            <body>
+                <div class="container">
+                    <img src="https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/solido.png" alt="">
+                    <p class="title">"""+"""a = {}<br>w = {}<br>h = {}<br><br>Donde:<br>a: largo del sólido rectangular<br>w: ancho del sólido rectangular<br>h: altura del sólido rectangular<br><br>El volumen del sólido rectangular es: {}</p>""".format(int(l),int(w),int(h),surfacearea)+"""</div>
+            </body>
+            </html>"""
+
+
+
+#volume right_circular_cone
+@app.route('/conoCircularRecto/volumen/<r>/<h>', methods=['GET'])
+def right_circular_cone_volume(r,h):
+    
+    volumen = (1/3)*((int(r))**2)*int(h)*(math.pi)
+    return(f"El volume de right_circular_cone es:  {str(volume)}")
+
+
+
+
+
+
+
+
+
+
+#surfacearea right_circular_cone
+@app.route('/conoCircularRecto/surfacearea/<r>/<h>', methods=['GET'])
+def right_circular_cone_surfacearea(r,h):
+    
+    surfacearea= math.pi*int(r)*math.sqrt(int(r)**2 + int(h)**2) + math.pi*int(r)**2
+    return(f"La surfacearea de right_circular_cone es:  {str(surfacearea)}")
+
+
+
+
+
+
+
+
+
+#volume right_circular_cylinder
+@app.route('/right_circular_cylinder/volume/<r>/<h>', methods=['GET'])
+def right_circular_cylinder_volume(r,h):
+    
+    volume = (int(r)**2)*int(h)*math.pi
+    return(f"El volume del right_circular_cylinder es:  {str(volume)}")
+
+#surfacearea right_circular_cylinder
+@app.route('/figurageometrica/right_circular_cylinder/surfacearea/<r>/<h>', methods=['GET'])
+def right_circular_cylinder_surfacearea(r,h):
+    
+    surfacearea= math.pi*2(int(r)*int(h) + int(r)**2)
+    return(f"La surfacearea de la right_circular_cylinder es:  {str(surfacearea)}")
 
 
 
@@ -467,19 +568,6 @@ def sphere_surfacearea(r):
     surfacearea= math.pi*4*(int(r)**2)
     return(f"La surfacearea de la sphere es:  {str(surfacearea)}")
 
-#volume right_circular_cylinder
-@app.route('/figurageometrica/right_circular_cylinder/volume/<r>/<h>', methods=['GET'])
-def right_circular_cylinder_volume(r,h):
-    
-    volume = (int(r)**2)*int(h)*math.pi
-    return(f"El volume del right_circular_cylinder es:  {str(volume)}")
-
-#surfacearea right_circular_cylinder
-@app.route('/figurageometrica/right_circular_cylinder/surfacearea/<r>/<h>', methods=['GET'])
-def right_circular_cylinder_surfacearea(r,h):
-    
-    surfacearea= math.pi*2(int(r)*int(h) + int(r)**2)
-    return(f"La surfacearea de la right_circular_cylinder es:  {str(surfacearea)}")
 
 #volume torus
 @app.route('/figurageometrica/torus/volume/<r>/<R>', methods=['GET'])
@@ -498,19 +586,6 @@ def torus_surfacearea(r,R):
 
 
 
-#volume right_circular_cone
-@app.route('/figurageometrica/right_circular_cone/volume/<r>/<h>', methods=['GET'])
-def right_circular_cone_volume(r,h):
-    
-    volume = (1/3)*(int(r)**2)*int(h)*math.pi
-    return(f"El volume de right_circular_cone es:  {str(volume)}")
-
-#surfacearea right_circular_cone
-@app.route('/figurageometrica/right_circular_cone/surfacearea/<r>/<h>', methods=['GET'])
-def right_circular_cone_surfacearea(r,h):
-    
-    surfacearea= math.pi*int(r)*math.sqrt(int(r)**2 + int(h)**2) + math.pi*int(r)**2
-    return(f"La surfacearea de right_circular_cone es:  {str(surfacearea)}")
 
 #volume frustum_of_a_cone  
 @app.route('/figurageometrica/frustum_of_a_cone/volume/<r>/<R>/<h>', methods=['GET'])
