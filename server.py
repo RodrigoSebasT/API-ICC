@@ -4,188 +4,6 @@ import math
 
 app = Flask(__name__)
 
-@app.route('/static/<content>')
-def static_content(content):
-    return render_template(content)
-
-
-@app.route('/toroide/<opcion>/<r>/<R>', methods=['GET'])
-def calcularToroide(opcion,r,R):
-    r = float(r)
-    R = float(R)
-    if opcion.lower()=='volumen':
-        return """<!DOCTYPE html><head><style type="text/css"> *{
-                    background-color: black;
-                    color:white
-                }
-
-                .toro {
-                    position: relative;
-                }
-
-                .toro .img_toro img{
-                    border-radius: 30px;
-                    width: 140%;
-                    height: 100%;
-
-                }
-
-                .toro .img_toro {
-                    position: absolute;
-                    left: 450px;
-                    top: 60px;
-                }
-
-                </style>
-                    <title>Document</title></head>
-                <body>
-                <div class="toro">"""+"""<p>r: radio del tubo<br>R: radio del toroide<br>r = {}<br>R = {}<br>Volumen: {}</p>""".format(r,R,(2*R*((pi)**2)*((r)**2)))+"""
-                        <div class='img_toro'><img src={}>
-                        </div>
-                    </div>
-                </body></html>""".format("https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/toro.png")
-
-
-    elif opcion.lower()=='surfacearea':
-        return f"r: radio del tubo\nR: radio del toroide\nr={r}\nR={R}\nSurface Area: {4*R*((pi)**2)*r}"
-
-
-
-@app.route('/tetraedroregular/<opcion>/<l>', methods=['GET'])
-def calcularTetraedro(opcion,l):
-    l = float(l)
-    if opcion.lower()=='volumen':
-        return f"l: lado del tetredro regular\nl={l}\nVolumen: {((2**(1/2))*(l**3))/12}"
-
-    elif opcion.lower()=='surfacearea':
-        return """<head><style type="text/css">
-                    body{background-color:black;color: white;}
-            .container {
-                width: 150px;
-                height: 150px;
-                margin: 50px auto;
-                position: relative;
-            }
-
-            .container .r1 {
-                color: white;
-                font-size: 30px;
-                position: absolute;
-                top: 50px;
-                right: -30px;
-            }
-
-            .container .r2 {
-                color: white;
-                font-size: 30px;
-                position: absolute;
-                top: 150px;
-                right: -20px;
-            }
-
-            .container .r3 {
-                color: white;
-                font-size: 30px;
-                position: absolute;
-                top: 175px;
-                right: 100px;
-            }
-
-            #cube {
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                top:30px;
-            }
-
-            #cube figure {
-                width: 100%;
-                height: 100%;
-                margin: 0;
-                border: 2px solid;
-                position: absolute;
-                background: hsla(0, 0%, 100%, 0.5);
-            }
-
-            #cube .back {
-                /*background: hsla(0, 100%, 50%, 0.5);*/
-                /*background: white;*/
-                border-color: white;
-            }
-
-
-
-            .container {
-                perspective: 350px;
-            }
-
-            #cube {
-                transform-style: preserve-3d;
-            }
-
-            #cube .back {
-                transform: rotateX(0deg);
-            }
-
-            #cube .left {
-                transform: rotateY(60deg);
-                border-color: white;
-
-            }
-
-            #cube .bottom {
-                transform: rotateX(60deg);
-                border-color: white;
-            }
-
-            #cube .back {
-                transform: rotateX(0deg) rotateY(-20deg) translateZ(-75px) translateX(0px); /*referencia*/
-            }
-            
-            #cube .left {
-            transform: rotateY(70deg) translateZ(-75px);
-
-            }
-
-            #cube .bottom {
-            transform: rotateX(90deg) translateZ(-75px) rotateZ(20.1deg);
-            }
-
-            #cube .front {
-                transform: rotateX(0deg) translateZ(75px) rotateY(-20deg) translateX(-28px);
-                border-color: white;
-            }
-
-            #cube .right {
-                transform: rotateY(70deg) translateZ(75.5px);
-                border-color: white;
-            }
-
-            #cube .top {
-                transform: rotateX(90deg) translateZ(75px) rotateZ(20.1deg) translateZ(1.1px);
-                border-color: white;
-            }
-                    </style>
-                    </head>
-                    <body>
-                    """+"""<p>l: lado del tetredro regular<br>l={}<br>Surface Area: {}</p>""".format(l,(3**(1/2))*(l**2))+"""<div class="container">
-                                    <div id="cube">
-                                        <figure class="back"></figure>
-                                        <figure class="left"></figure>
-                                        <figure class="bottom"></figure>
-                                        <figure class="right"></figure>
-                                        <figure class="top"></figure>
-                                        <figure class="front"></figure>  <!--probar-->
-                                    </div>
-                                    <p class="r1">r</p>
-                                    <p class="r2">r</p>
-                                    <p class="r3">r</p>
-                                </div>
-                                
-                                
-                            </body>"""
-
-
 #INICIO DEL CODIGO
 
 #volumen del cubo
@@ -229,11 +47,11 @@ def cube_volume(s):
                 }
                 .container .title {
                     position: relative;
-                    top: 40px;
+                    top: 30px;
                     font-size: 20px;
                     width: 280px;
                     padding: 15px;
-                    left: 10px;
+                    left: 30px;
                     border: 2px solid white;
                     border-radius: 20px;
                     text-align: center;
@@ -245,7 +63,7 @@ def cube_volume(s):
         <body>
             <div class="container">
                 <img src="https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/cubo.png" alt="">
-                <p class="title">"""+"""s = {}<br>El volumen del cubo es: {}</p>""".format(entero,volumen)+"""</div>
+                <p class="title">"""+"""s = {}<br><br>Donde:<br>s: lado del cubo<br><br>El volumen del cubo es: {}</p>""".format(entero,volumen)+"""</div>
         </body>
         </html>"""
 
@@ -289,11 +107,11 @@ def cube_surfacearea(s):
                 }
                 .container .title {
                     position: relative;
-                    top: 40px;
+                    top: 30px;
                     font-size: 20px;
                     width: 280px;
                     padding: 15px;
-                    left: 10px;
+                    left: 40px;
                     border: 2px solid white;
                     border-radius: 20px;
                     text-align: center;
@@ -305,7 +123,7 @@ def cube_surfacearea(s):
         <body>
             <div class="container">
                 <img src="https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/cubo.png" alt="">
-                <p class="title">"""+"""s = {}<br>El área superficial del cubo es: {}</p>""".format(entero,surfacearea)+"""</div>
+                <p class="title">"""+"""s = {}<br><br>Donde:<br>s: lado del cubo<br><br>El área superficial del cubo es: {}</p>""".format(entero,surfacearea)+"""</div>
         </body>
         </html>"""
 
@@ -341,8 +159,8 @@ def general_cone_or_pyramid_volume(a,h):
                 }
                 .container img {
                     position: absolute;
-                    left: 400px;
-                    top:5px;
+                    left: 460px;
+                    top:15px;
                     border-radius: 30px;
                     width: 350px;
                     height: 300px;
@@ -350,9 +168,9 @@ def general_cone_or_pyramid_volume(a,h):
                 }
                 .container .title {
                     position: relative;
-                    top: 40px;
+                    top: 18px;
                     font-size: 20px;
-                    width: 280px;
+                    width: 380px;
                     padding: 15px;
                     left: 10px;
                     border: 2px solid white;
@@ -366,7 +184,7 @@ def general_cone_or_pyramid_volume(a,h):
         <body>
             <div class="container">
                 <img src="https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/cono.png" alt="">
-                <p class="title">"""+"""A = {}<br>h = {}<br>El volumen del cono o pirámide general es: {}</p>""".format(int(a),int(h),volumen)+"""</div>
+                <p class="title">"""+"""A = {}<br>h = {}<br><br>Donde:<br>A: área de la base del cono o pirámide general<br>h: altura de la pirámide o cono general<br><br>El volumen del cono o pirámide general es: {}</p>""".format(int(a),int(h),volumen)+"""</div>
         </body>
         </html>"""
 
@@ -1350,16 +1168,123 @@ def torus_surfacearea(r,R):
 @app.route('/tetraedroRegular/volumen/<s>', methods=['GET'])
 def regular_tetrahedron_volume(s):
     volumen = (1/12)*(math.sqrt(2))*((int(s))**3)
-    return(f"El volume de regular_tetrahedron es:  {str(volume)}")
+
+    return """<!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+        </head>
+        <body>
+            <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+            <link rel="stylesheet" href="../css/solidoRectangular.css">
+            <style>
+                * {
+                    background-color: black;
+                    color: white;
+                    font-family: 'Roboto', sans-serif;
+                }
+                .container {
+                    position: relative;
+                }
+                .container img {
+                    position: absolute;
+                    left: 445px;
+                    top:-8px;
+                    border-radius: 30px;
+                    width: 370px;
+                    height: 350px;
+                    background-color:white;
+                }
+                .container .title {
+                    position: relative;
+                    top: 20px;
+                    font-size: 20px;
+                    width: 360px;
+                    padding: 15px;
+                    left: 10px;
+                    border: 2px solid white;
+                    border-radius: 20px;
+                    text-align: center;
+                }
+                
+            </style>
+        </head>
+
+        <body>
+            <div class="container">
+                <img src="https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/tetraedro.png" alt="">
+                <p class="title">"""+"""s = {}<br><br>Donde:<br>s: lado del tetraedro regular<br><br>El volumen del tetraedro regular es: {}</p>""".format(int(s),volumen)+"""</div>
+        </body>
+        </html>"""
 
 
 
 
 #surfacearea regular_tetrahedron
-@app.route('/tetraedroRegular/surfacearea/<s>', methods=['GET'])
+@app.route('/tetraedroregular/surfacearea/<s>', methods=['GET'])
 def regular_tetrahedron_surfacearea(s):
     surfacearea= (math.sqrt(3))*((int(s))**2)
-    return(f"La surfacearea de regular_tetrahedron es:  {str(surfacearea)}")
+    
+    return """<!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+        </head>
+        <body>
+            <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+            <style>
+                * {
+                    background-color: black;
+                    color: white;
+                    font-family: 'Roboto', sans-serif;
+                }
+                .container {
+                    position: relative;
+                }
+                .container img {
+                    position: absolute;
+                    left: 445px;
+                    top:-8px;
+                    border-radius: 30px;
+                    width: 370px;
+                    height: 350px;
+                    background-color:white;
+                }
+                .container .title {
+                    position: relative;
+                    top: 20px;
+                    font-size: 20px;
+                    width: 360px;
+                    padding: 15px;
+                    left: 10px;
+                    border: 2px solid white;
+                    border-radius: 20px;
+                    text-align: center;
+                }
+                
+            </style>
+        </head>
+
+        <body>
+            <div class="container">
+                <img src="https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/tetraedro.png" alt="">
+                <p class="title">"""+"""s = {}<br><br>Donde:<br>s: lado del tetraedro regular<br><br>El área superficial del tetraedro regular es: {}</p>""".format(int(s),surfacearea)+"""</div>
+        </body>
+        </html>"""
 
 
 
