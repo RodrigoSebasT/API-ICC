@@ -1,44 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/tetraedroRegular.css">
-</head>
-<body>
-    <div id="tridiv">
-        <div class="scene" style="-webkit-transform:rotateX(-20deg) rotateY(-108deg); -moz-transform:rotateX(-20deg) rotateY(-108deg); -ms-transform:rotateX(-20deg) rotateY(-108deg); transform:rotateX(-20deg) rotateY(-108deg); ">
-          <div class="shape pyramid-1 pyr-1">
-            <div class="face-wrapper ft">
-              <div class="face">
-                <div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.298);"></div>
-              </div>
-            </div>
-            <div class="face-wrapper bk">
-              <div class="face">
-                <div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.384);"></div>
-              </div>
-            </div>
-            <div class="face-wrapper lt">
-              <div class="face">
-                <div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.384);"></div>
-              </div>
-            </div>
-            <div class="face-wrapper rt">
-              <div class="face">
-                <div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.384);"></div>
-              </div>
-            </div>
-            <div class="face bm">
-              <div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.384);"></div>
-            </div>
-          </div>
-        </div>
+    <link rel="stylesheet" href="../css/solidoRectangular.css">
+    <style>
+        * {
+            background-color: black;
+        }
+        .container {
+            position: relative;
+        }
+        .container img {
+            position: absolute;
+            left: 380px;
+            top: 4px;
+            width: 360px;
+            height: 330px;
+        }
 
-      
-      </div>
-    
+        .letras{
+            position: relative;
+        }
+
+        .letras .s1 {
+            position: absolute;
+            left: 520px;
+            top: 220px;
+            color:white;
+            background-color:transparent;
+            font-size: 26px;
+        }
+        .letras .s2 {
+            position: absolute;
+            left: 682px;
+            top: 189px;
+            color:white;
+            background-color:transparent;
+            font-size: 26px;
+        }
+        .letras .s3 {
+            position: absolute;
+            left: 596px;
+            top: 130px;
+            color:white;
+            background-color:transparent;
+            font-size: 26px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/tetraedroRegular.png" alt="">
+    </div>
+    <div class="letras">
+        <p class='s1'>s</p>
+        <p class='s2'>s</p>
+        <p class='s3'>s</p>
+    </div>
+
+
 </body>
 </html>

@@ -51,7 +51,6 @@ def calcularToroide(opcion,r,R):
 
 
 
-
 @app.route('/tetraedroregular/<opcion>/<l>', methods=['GET'])
 def calcularTetraedro(opcion,l):
     l = float(l)
@@ -186,16 +185,162 @@ def calcularTetraedro(opcion,l):
                                 
                             </body>"""
 
-@app.route('/name/<name>', methods=['GET'])
-def ejemplo(name):
-    return f"Hola, {name}"
-#volume cube
-@app.route('/figurageometrica/cube/volume/<s>', methods=['GET'])
-def cube_volume(s):
 
+#INICIO DEL CODIGO
+
+@app.route('/cubo/volumen/<s>', methods=['GET'])
+def cube_volume(s):
     entero = int(s)
-    volumen = entero**3
-    return (f"El volumen del cubo es: {str(volumen)}")
+    volumen = (entero)**3
+    
+    return """<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/cube.css">
+
+    <title>Cubo</title>
+    <style>
+        body {
+            /*background-color: #454545;*/
+            background-color: black;
+            color: white;
+        }
+
+        .container {
+            width: 150px;
+            height: 150px;
+            margin: 50px auto;
+            position: relative;
+        }
+
+        .container .r1 {
+            color: white;
+            font-size: 30px;
+            position: absolute;
+            top: 50px;
+            right: -30px;
+        }
+
+        .container .r2 {
+            color: white;
+            font-size: 30px;
+            position: absolute;
+            top: 150px;
+            right: -20px;
+        }
+
+        .container .r3 {
+            font-size: 30px;
+            position: absolute;
+            top: 175px;
+            right: 100px;
+        }
+
+        #cube {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 30px;
+        }
+
+        #cube figure {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            border: 2px solid;
+            position: absolute;
+            background: hsla(0, 0%, 100%, 0.5);
+        }
+
+        #cube .back {
+            /*background: hsla(0, 100%, 50%, 0.5);*/
+            /*background: white;*/
+            border-color: white;
+        }
+
+
+
+        .container {
+            perspective: 350px;
+        }
+
+        #cube {
+            transform-style: preserve-3d;
+        }
+
+        #cube .back {
+            transform: rotateX(0deg);
+        }
+
+        #cube .left {
+            transform: rotateY(60deg);
+            border-color: white;
+
+        }
+
+        #cube .bottom {
+            transform: rotateX(60deg);
+            border-color: white;
+        }
+
+        #cube .back {
+            transform: rotateX(0deg) rotateY(-20deg) translateZ(-75px) translateX(0px);
+            /*referencia*/
+        }
+
+        #cube .left {
+            transform: rotateY(70deg) translateZ(-75px);
+
+        }
+
+        #cube .bottom {
+            transform: rotateX(90deg) translateZ(-75px) rotateZ(20.1deg);
+        }
+
+        #cube .front {
+            transform: rotateX(0deg) translateZ(75px) rotateY(-20deg) translateX(-28px);
+            border-color: white;
+        }
+
+        #cube .right {
+            transform: rotateY(70deg) translateZ(75.5px);
+            border-color: white;
+        }
+
+        #cube .top {
+            transform: rotateX(90deg) translateZ(75px) rotateZ(20.1deg) translateZ(1.1px);
+            border-color: white;
+        }
+        body .container .textos .r1{
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="container2">
+        <div id="cube">
+            <figure class="back"></figure>
+            <figure class="left"></figure>
+            <figure class="bottom"></figure>
+            <figure class="right"></figure>
+            <figure class="top"></figure>
+            <figure class="front"></figure>
+            <!--probar-->
+        </div>
+        <div class="textos">
+        <p class="r1">s</p>
+        <p class="r2">s</p>
+        <p class="r3">s</p></div>
+    </div>"""+"""<div>
+    <p>s = {}<br>El volumen del cubo es: {}</p>
+    </div>""".format(entero,volumen)+"""</body>
+
+</html>"""
 
 #surfacearea cube
 @app.route('/figurageometrica/cube/surfacearea/<s>', methods=['GET'])
@@ -323,6 +468,10 @@ def regular_tetrahedron_surfacearea(s):
    
     surfacearea= math.sqrt(3)*(int(s)**2)
     return(f"La surfacearea de regular_tetrahedron es:  {str(surfacearea)}")
+
+
+
+
 
 if __name__ == '__main__':
     app.secret_key = ".."
