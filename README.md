@@ -6,9 +6,9 @@
 
 - ### Volumen de un cubo:
     #### URL
-    figurageometrica/cube/volumen/s
+    http://127.0.0.1:8080/cubo/volumen/<s>
 
-    #### Parametros
+    #### Parámetros
     - s: Lado del cubo
 
     #### Salida
