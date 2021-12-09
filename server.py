@@ -6,11 +6,17 @@ app = Flask(__name__)
 
 #INICIO DEL CODIGO
 
+#primera pagina
+@app.route('/<content>')
+def mostrar_interfaz(content):
+    return render_template(content)
+
 #volumen del cubo
 @app.route('/cubo/volumen/<s>', methods=['GET'])
 def cube_volume(s):
     entero = int(s)
     volumen = (entero)**3
+    volumen = round(volumen,2)
     
     return """
             <!DOCTYPE html>
@@ -72,6 +78,7 @@ def cube_volume(s):
 def cube_surfacearea(s):
     entero = int(s)
     surfacearea = 6*((entero)**2)
+    surfacearea = round(surfacearea,2)
     return """
             <!DOCTYPE html>
         <html lang="en">
@@ -132,7 +139,7 @@ def cube_surfacearea(s):
 @app.route('/conoGeneraloPiramide/volumen/<a>/<h>', methods=['GET'])
 def general_cone_or_pyramid_volume(a,h):
     volumen = (1/3)*int(a)*int(h)
-
+    volumen = round(volumen,2)
     return """
             <!DOCTYPE html>
         <html lang="en">
@@ -194,7 +201,7 @@ def general_cone_or_pyramid_volume(a,h):
 @app.route('/solidoRectangular/volumen/<l>/<w>/<h>', methods=['GET'])
 def rectangular_solid_volume(l,w,h):
     volumen = int(l)*int(w)*int(h)
-
+    volumen = round(volumen,2)
     return """
             <!DOCTYPE html>
         <html lang="en">
@@ -264,7 +271,7 @@ def rectangular_solid_volume(l,w,h):
 @app.route('/solidoRectangular/surfacearea/<l>/<w>/<h>', methods=['GET'])
 def rectangular_solid_surfacearea(l,w,h):
     surfacearea = 2*(int(l)*int(w) + int(h)*int(l) + int(w)*int(h))
-
+    surfacearea = round(surfacearea,2)
     return """
                 <!DOCTYPE html>
             <html lang="en">
@@ -317,7 +324,7 @@ def rectangular_solid_surfacearea(l,w,h):
             <body>
                 <div class="container">
                     <img src="https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/solido.png" alt="">
-                    <p class="title">"""+"""a = {}<br>w = {}<br>h = {}<br><br>Donde:<br>a: largo del sólido rectangular<br>w: ancho del sólido rectangular<br>h: altura del sólido rectangular<br><br>El volumen del sólido rectangular es: {}</p>""".format(int(l),int(w),int(h),surfacearea)+"""</div>
+                    <p class="title">"""+"""a = {}<br>w = {}<br>h = {}<br><br>Donde:<br>a: largo del sólido rectangular<br>w: ancho del sólido rectangular<br>h: altura del sólido rectangular<br><br>El área superficial del sólido rectangular es: {}</p>""".format(int(l),int(w),int(h),surfacearea)+"""</div>
             </body>
             </html>"""
 
@@ -327,7 +334,7 @@ def rectangular_solid_surfacearea(l,w,h):
 @app.route('/conoCircularRecto/volumen/<r>/<h>', methods=['GET'])
 def right_circular_cone_volume(r,h):
     volumen = (1/3)*((int(r))**2)*int(h)*(math.pi)
-
+    volumen = round(volumen,2)
     return """
             <!DOCTYPE html>
         <html lang="en">
@@ -405,7 +412,7 @@ def right_circular_cone_volume(r,h):
 @app.route('/conoCircularRecto/surfacearea/<r>/<h>', methods=['GET'])
 def right_circular_cone_surfacearea(r,h):
     surfacearea= ((math.pi)*(int(r))*(math.sqrt(((int(r))**2) + ((int(h))**2)))) + (math.pi*((int(r))**2))
-
+    surfacearea = round(surfacearea,2)
     return """
             <!DOCTYPE html>
         <html lang="en">
@@ -469,7 +476,7 @@ def right_circular_cone_surfacearea(r,h):
 @app.route('/esfera/volumen/<r>', methods=['GET'])
 def sphere_volume(r):
     volumen = ((int(r))**3)*(4/3)*(math.pi)
-
+    volumen = round(volumen,2)
     return """
             <!DOCTYPE html>
         <html lang="en">
@@ -546,7 +553,7 @@ def sphere_volume(r):
 @app.route('/esfera/surfacearea/<r>', methods=['GET'])
 def sphere_surfacearea(r):
     surfacearea= (math.pi)*4*((int(r))**2)
-
+    surfacearea = round(surfacearea,2)
     return """<!DOCTYPE html>
         <html lang="en">
         <head>
@@ -642,7 +649,7 @@ def sphere_surfacearea(r):
 @app.route('/troncoDeCono/volumen/<r>/<R>/<h>', methods=['GET'])
 def frustum_of_a_cone_volume(r,R,h):
     volumen = ((math.pi)/3)*(((int(r))**2) + ((int(r))*(int(R))) + ((int(R))**2))*(int(h))
-
+    volumen = round(volumen,2)
     return """<!DOCTYPE html>
         <html lang="en">
         <head>
@@ -712,7 +719,7 @@ def frustum_of_a_cone_volume(r,R,h):
 @app.route('/troncoDeCono/surfacearea/<r>/<R>/<s>', methods=['GET'])
 def frustum_of_a_cone_surfacearea(r,R,s):
     surfacearea= math.pi*((int(s)*(int(R) + int(r))) + ((int(r))**2) + ((int(R))**2))
-    
+    surfacearea = round(surfacearea,2)
     return """<!DOCTYPE html>
         <html lang="en">
         <head>
@@ -778,7 +785,7 @@ def frustum_of_a_cone_surfacearea(r,R,s):
 @app.route('/cilindroCircularRecto/volumen/<r>/<h>', methods=['GET'])
 def right_circular_cylinder_volume(r,h):
     volumen = ((int(r))**2)*(int(h))*(math.pi)
-
+    volumen = round(volumen,2)
     return """<!DOCTYPE html>
         <html lang="en">
         <head>
@@ -845,7 +852,7 @@ def right_circular_cylinder_volume(r,h):
 @app.route('/cilindroCircularRecto/surfacearea/<r>/<h>', methods=['GET'])
 def right_circular_cylinder_surfacearea(r,h):
     surfacearea= (math.pi)*2*((int(r)*int(h)) + ((int(r))**2)) 
-    
+    surfacearea = round(surfacearea,2)
     return """<!DOCTYPE html>
         <html lang="en">
         <head>
@@ -909,7 +916,7 @@ def right_circular_cylinder_surfacearea(r,h):
 @app.route('/piramideCuadrangular/volumen/<s>/<h>', methods=['GET'])
 def square_pyramid_volume(s,h):
     volumen = (1/3)*((int(s))**2)*(int(h))
-    
+    volumen = round(volumen,2)
     return """<!DOCTYPE html>
         <html lang="en">
         <head>
@@ -972,7 +979,7 @@ def square_pyramid_volume(s,h):
 @app.route('/piramideCuadrangular/surfacearea/<s>/<h>', methods=['GET'])
 def square_pyramid_surfacearea(h,s):
     surfacearea= (int(s))*((int(s)) + (math.sqrt(((int(s))**2) + (4*((int(h))**2)))))
-
+    surfacearea = round(surfacearea,2)
     return """<!DOCTYPE html>
         <html lang="en">
         <head>
@@ -1037,7 +1044,7 @@ def square_pyramid_surfacearea(h,s):
 @app.route('/toroide/volumen/<r>/<R>', methods=['GET'])
 def torus_volumen(r,R):
     volumen = ((int(r))**2)*(int(R))*((math.pi)**2)*2
-
+    volumen = round(volumen,2)
     return """<!DOCTYPE html>
         <html lang="en">
         <head>
@@ -1104,7 +1111,7 @@ def torus_volumen(r,R):
 @app.route('/toroide/surfacearea/<r>/<R>', methods=['GET'])
 def torus_surfacearea(r,R):
     surfacearea= ((math.pi)**2)*4*(int(r))*(int(R))
-
+    surfacearea = round(surfacearea,2)
     return """<!DOCTYPE html>
         <html lang="en">
         <head>
@@ -1168,7 +1175,7 @@ def torus_surfacearea(r,R):
 @app.route('/tetraedroRegular/volumen/<s>', methods=['GET'])
 def regular_tetrahedron_volume(s):
     volumen = (1/12)*(math.sqrt(2))*((int(s))**3)
-
+    volumen = round(volumen,2)
     return """<!DOCTYPE html>
         <html lang="en">
         <head>
@@ -1231,7 +1238,7 @@ def regular_tetrahedron_volume(s):
 @app.route('/tetraedroregular/surfacearea/<s>', methods=['GET'])
 def regular_tetrahedron_surfacearea(s):
     surfacearea= (math.sqrt(3))*((int(s))**2)
-    
+    surfacearea = round(surfacearea,2)
     return """<!DOCTYPE html>
         <html lang="en">
         <head>
