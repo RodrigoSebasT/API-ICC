@@ -1,7 +1,7 @@
-# Nombre del proyecto:
-# Descripción del proyecto:
-# Nombre de integrantes:
-# ID de GitHub: 
+## Nombre del proyecto:
+## Descripción del proyecto:
+## Nombre de integrantes:
+## ID de GitHub: 
 ## Especificación del API
 
 - ### Volumen de un cubo:
@@ -17,7 +17,7 @@
     #### Ejemplo
 
     - URL: localhost:9000/cube/volumen/3
-    - Salida: 27 (o screenshot de la salida en caso existan gráficos)
+    ![This is an image]()
 
 - ### Área de superficie de un cubo:
     ## URL
@@ -32,7 +32,7 @@
     ## Ejemplo
 
     - URL: localhost:9000/figurageométrica/cube/surfacearea/3
-    - Salida: 27 (o screenshot de la salida en caso existan gráficos)
+    ![This is an image]()
 
 - ### Volumen de un sólido rectangular:
     ## URL
@@ -49,7 +49,7 @@
     ## Ejemplo
 
     - URL: localhost:9000/figurageometrica/rectangular_solid/volume/l/w/h
-    - Salida: 27 (o screenshot de la salida en caso existan gráficos)
+    ![This is an image]()
 
 - ### Área de superficie de un solido rectangular:
     ## URL
@@ -66,7 +66,7 @@
     ## Ejemplo
 
     - URL: localhost:9000/figurageométrica/rectangular_solid/surfacearea/3
-    - Salida: 27 (o screenshot de la salida en caso existan gráficos)
+    ![This is an image]()
 
 - ### Volumen de una esfera:
     ## URL
@@ -81,7 +81,7 @@
     ## Ejemplo
 
     - URL: localhost:9000/figurageometrica/sphere/volume/l/w/h
-    - Salida: 27 (o screenshot de la salida en caso existan gráficos)
+    ![This is an image]()
 
 - ### Área de superficie de una esfera:
     ## URL
@@ -96,7 +96,7 @@
     ## Ejemplo
 
     - URL: localhost:9000/figurageométrica/sphere/surfacearea/3
-    - Salida: 27 (o screenshot de la salida en caso existan gráficos)
+    ![This is an image]()
 
  - ### Volumen de un cilindro circular recto:
     ## URL
@@ -112,7 +112,7 @@
     ## Ejemplo
 
     - URL: localhost:9000/figurageometrica/right_circular_cylinder/volume/l/w/h
-    - Salida: 27 (o screenshot de la salida en caso existan gráficos)
+    ![This is an image]()
 
 - ### Área de superficie de un cilindro circular recto:
     ## URL
@@ -128,7 +128,7 @@
     ## Ejemplo
 
     - URL: localhost:9000/figurageométrica/right_circular_cylinder/surfacearea/3
-    - Salida: 27 (o screenshot de la salida en caso existan gráficos)
+    ![This is an image]()
 
 
  - ### Volumen de un torus:
@@ -145,7 +145,7 @@
     ## Ejemplo
 
     - URL: localhost:9000/figurageometrica/torus/volume/l/w/h
-    - Salida: 27 (o screenshot de la salida en caso existan gráficos)
+    ![This is an image]()
 
 - ### Área de superficie de un cilindro circular derecho:
     ## URL
@@ -178,7 +178,7 @@
     ## Ejemplo
 
     - URL: localhost:9000/figurageometrica/general_cone_or_pyramid/volume/l/w/h
-    - Salida: 27 (o screenshot de la salida en caso existan gráficos)
+    ![This is an image]()
 
  - ### Volumen general de un cono circular recto:
     ## URL
@@ -194,7 +194,7 @@
     ## Ejemplo
 
     - URL: localhost:9000/figurageometrica/right_circular_cone/volume/l/w/h
-    - Salida: 27 (o screenshot de la salida en caso existan gráficos)
+    ![This is an image]()
 
 - ### Área de superficie de un cono circular recto:
     ## URL
@@ -210,7 +210,7 @@
     ## Ejemplo
 
     - URL: localhost:9000/figurageométrica/right_circular_cone/surfacearea/3
-    - Salida: 27 (o screenshot de la salida en caso existan gráficos)
+    ![This is an image]()
 
  - ### Volumen general de un cono truncado:
     ## URL
@@ -227,7 +227,7 @@
     ## Ejemplo
 
     - URL: localhost:9000/figurageometrica/frustum_of_a_cone/volume/l/w/h
-    - Salida: 27 (o screenshot de la salida en caso existan gráficos)
+    ![This is an image]()
 
 - ### Área de superficie de un cono truncado:
     ## URL
@@ -244,7 +244,7 @@
     ## Ejemplo
 
     - URL: localhost:9000/figurageométrica/frustum_of_a_cone/surfacearea/3
-    - Salida: 27 (o screenshot de la salida en caso existan gráficos)
+    ![This is an image]()
 
  - ### Volumen general de una pirámide cuadrada:
     ## URL
@@ -260,7 +260,7 @@
     ## Ejemplo
 
     - URL: localhost:9000/figurageometrica/square_pyramid/volume/l/w/h
-    - Salida: 27 (o screenshot de la salida en caso existan gráficos)
+    ![This is an image]()
 
 - ### Área de superficie de un square_pyramid:
     ## URL
@@ -276,7 +276,7 @@
     ## Ejemplo
 
     - URL: localhost:9000/figurageométrica/square_pyramid/surfacearea/3
-    - Salida: 27 (o screenshot de la salida en caso existan gráficos)
+    ![This is an image]()
 
  - ### Volumen general de un tetrahedro regular:
     ## URL
@@ -291,7 +291,7 @@
     ## Ejemplo
 
     - URL: localhost:9000/figurageometrica/regular_tetrahedron/volume/l/w/h
-    - Salida: 27 (o screenshot de la salida en caso existan gráficos)
+    -![This is an image]()
 
 - ### Área de superficie de un square_pyramid:
     ## URL
@@ -306,5 +306,5 @@
     ## Ejemplo
 
     - URL: localhost:9000/figurageométrica/regular_tetrahedron/surfacearea/3
-    - Salida: 27 (o screenshot de la salida en caso existan gráficos)
+    ![This is an image]()
 
