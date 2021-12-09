@@ -561,7 +561,7 @@ def right_circular_cone_volume(r,h):
 
 <body>
     <div class="container">
-        <img src="https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/Copia%20de%20cono.png" alt="">
+        <img src="https://github.com/RodrigoSebasT/API-ICC/blob/main/static/images/Copia_cono.png" alt="">
         <p class="title">"""+"""r = {}<br>h = {}<br><br>Donde:<br>r: radio del cono circular recto<br>h: altura del cono circular recto<br><br>El volumen del cono circular recto es: {}</p>""".format(int(r),int(h),volumen)+"""</div>
 </body>
 </html>"""
