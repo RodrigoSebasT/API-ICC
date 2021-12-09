@@ -17,7 +17,7 @@
     #### Ejemplo
 
     - URL: localhost:9000/cube/volumen/3
-    ![https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/cuboReadmeVolumen.png]()
+    ![Imagen de un cubo](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/cuboReadmeVolumen.png])
 
 - ### Área de superficie de un cubo:
     #### URL
