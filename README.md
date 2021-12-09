@@ -6,7 +6,7 @@
 
 - ### Volumen de un cubo:
     #### URL
-    http://127.0.0.1:8080/cubo/volumen/<s>
+    http://127.0.0.1:8080/cubo/volumen/:s
 
     #### Parámetros
     - s: Lado del cubo
