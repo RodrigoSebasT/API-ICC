@@ -188,174 +188,258 @@ def calcularTetraedro(opcion,l):
 
 #INICIO DEL CODIGO
 
+#volumen del cubo
 @app.route('/cubo/volumen/<s>', methods=['GET'])
 def cube_volume(s):
     entero = int(s)
     volumen = (entero)**3
     
-    return """<!DOCTYPE html>
-<html lang="en">
+    return """
+            <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+        </head>
+        <body>
+            <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+            <link rel="stylesheet" href="../css/solidoRectangular.css">
+            <style>
+                * {
+                    background-color: black;
+                    color: white;
+                }
+                .container {
+                    position: relative;
+                }
+                .container img {
+                    position: absolute;
+                    left: 400px;
+                    top:-4px;
+                    border-radius: 30px;
+                    width: 400px;
+                    height: 400px;
+                    background-color:white;
+                }
+                .container .title {
+                    position: relative;
+                    top: 40px;
+                    font-size: 20px;
+                    width: 280px;
+                    padding: 15px;
+                    left: 10px;
+                    border: 2px solid white;
+                    border-radius: 20px;
+                    text-align: center;
+                }
+                
+            </style>
+        </head>
 
+        <body>
+            <div class="container">
+                <img src="https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/cubo.png" alt="">
+                <p class="title">"""+"""s = {}<br>El volumen del cubo es: {}</p>""".format(entero,volumen)+"""</div>
+        </body>
+        </html>"""
+
+#area superficial del cubo
+@app.route('/cubo/surfacearea/<s>', methods=['GET'])
+def cube_surfacearea(s):
+    entero = int(s)
+    surfacearea = 6*((entero)**2)
+    return """
+            <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+        </head>
+        <body>
+            <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+            <link rel="stylesheet" href="../css/solidoRectangular.css">
+            <style>
+                * {
+                    background-color: black;
+                    color: white;
+                }
+                .container {
+                    position: relative;
+                }
+                .container img {
+                    position: absolute;
+                    left: 400px;
+                    top:-4px;
+                    border-radius: 30px;
+                    width: 400px;
+                    height: 400px;
+                    background-color:white;
+                }
+                .container .title {
+                    position: relative;
+                    top: 40px;
+                    font-size: 20px;
+                    width: 280px;
+                    padding: 15px;
+                    left: 10px;
+                    border: 2px solid white;
+                    border-radius: 20px;
+                    text-align: center;
+                }
+                
+            </style>
+        </head>
+
+        <body>
+            <div class="container">
+                <img src="https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/cubo.png" alt="">
+                <p class="title">"""+"""s = {}<br>El área superficial del cubo es: {}</p>""".format(entero,surfacearea)+"""</div>
+        </body>
+        </html>"""
+
+
+#volume general_cone_or_pyramid
+@app.route('/conoGeneraloPiramide/volumen/<a>/<h>', methods=['GET'])
+def general_cone_or_pyramid_volume(a,h):
+    volumen = (1/3)*int(a)*int(h)
+
+    return """
+            <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+        </head>
+        <body>
+            <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+            <link rel="stylesheet" href="../css/solidoRectangular.css">
+            <style>
+                * {
+                    background-color: black;
+                    color: white;
+                }
+                .container {
+                    position: relative;
+                }
+                .container img {
+                    position: absolute;
+                    left: 400px;
+                    top:5px;
+                    border-radius: 30px;
+                    width: 350px;
+                    height: 300px;
+                    background-color:white;
+                }
+                .container .title {
+                    position: relative;
+                    top: 40px;
+                    font-size: 20px;
+                    width: 280px;
+                    padding: 15px;
+                    left: 10px;
+                    border: 2px solid white;
+                    border-radius: 20px;
+                    text-align: center;
+                }
+                
+            </style>
+        </head>
+
+        <body>
+            <div class="container">
+                <img src="https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/cono.png" alt="">
+                <p class="title">"""+"""A = {}<br>h = {}<br>El volumen del cono o pirámide general es: {}</p>""".format(int(a),int(h),volumen)+"""</div>
+        </body>
+        </html>"""
+
+
+
+#volume rectangular_solid
+@app.route('/solidoRectangular/volumen/<l>/<w>/<h>', methods=['GET'])
+def rectangular_solid_volume(l,w,h):
+    volumen = int(l)*int(w)*int(h)
+
+    return """
+    <!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/cube.css">
-
-    <title>Cubo</title>
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/solidoRectangular.css">
     <style>
-        body {
-            /*background-color: #454545;*/
+        * {
             background-color: black;
             color: white;
         }
-
         .container {
-            width: 150px;
-            height: 150px;
-            margin: 50px auto;
             position: relative;
         }
-
-        .container .r1 {
-            color: white;
-            font-size: 30px;
+        .container img {
             position: absolute;
-            top: 50px;
-            right: -30px;
+            left: 400px;
+            top:5px;
+            border-radius: 30px;
+            width: 350px;
+            height: 300px;
+            background-color:white;
         }
-
-        .container .r2 {
-            color: white;
-            font-size: 30px;
-            position: absolute;
-            top: 150px;
-            right: -20px;
+        .container .title {
+            position: relative;
+            top: 40px;
+            font-size: 20px;
+            width: 280px;
+            padding: 15px;
+            left: 10px;
+            border: 2px solid white;
+            border-radius: 20px;
+            text-align: center;
         }
-
-        .container .r3 {
-            font-size: 30px;
-            position: absolute;
-            top: 175px;
-            right: 100px;
-        }
-
-        #cube {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 30px;
-        }
-
-        #cube figure {
-            width: 100%;
-            height: 100%;
-            margin: 0;
-            border: 2px solid;
-            position: absolute;
-            background: hsla(0, 0%, 100%, 0.5);
-        }
-
-        #cube .back {
-            /*background: hsla(0, 100%, 50%, 0.5);*/
-            /*background: white;*/
-            border-color: white;
-        }
-
-
-
-        .container {
-            perspective: 350px;
-        }
-
-        #cube {
-            transform-style: preserve-3d;
-        }
-
-        #cube .back {
-            transform: rotateX(0deg);
-        }
-
-        #cube .left {
-            transform: rotateY(60deg);
-            border-color: white;
-
-        }
-
-        #cube .bottom {
-            transform: rotateX(60deg);
-            border-color: white;
-        }
-
-        #cube .back {
-            transform: rotateX(0deg) rotateY(-20deg) translateZ(-75px) translateX(0px);
-            /*referencia*/
-        }
-
-        #cube .left {
-            transform: rotateY(70deg) translateZ(-75px);
-
-        }
-
-        #cube .bottom {
-            transform: rotateX(90deg) translateZ(-75px) rotateZ(20.1deg);
-        }
-
-        #cube .front {
-            transform: rotateX(0deg) translateZ(75px) rotateY(-20deg) translateX(-28px);
-            border-color: white;
-        }
-
-        #cube .right {
-            transform: rotateY(70deg) translateZ(75.5px);
-            border-color: white;
-        }
-
-        #cube .top {
-            transform: rotateX(90deg) translateZ(75px) rotateZ(20.1deg) translateZ(1.1px);
-            border-color: white;
-        }
-        body .container .textos .r1{
-            font-size: 30px;
-        }
+        
     </style>
 </head>
 
 <body>
-    <div class="container" id="container2">
-        <div id="cube">
-            <figure class="back"></figure>
-            <figure class="left"></figure>
-            <figure class="bottom"></figure>
-            <figure class="right"></figure>
-            <figure class="top"></figure>
-            <figure class="front"></figure>
-            <!--probar-->
-        </div>
-        <div class="textos">
-        <p class="r1">s</p>
-        <p class="r2">s</p>
-        <p class="r3">s</p></div>
-    </div>"""+"""<div>
-    <p>s = {}<br>El volumen del cubo es: {}</p>
-    </div>""".format(entero,volumen)+"""</body>
-
+    <div class="container">
+        <img src="https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/solidoRectangular.png" alt="">
+        <p class="title">"""+"""l = {}<br>w = {}<br>h = {}<br>El volumen del sólido rectangular es: {}</p>""".format(int(l),int(w),int(h),volumen)+"""</div>
+</body>
 </html>"""
 
-#surfacearea cube
-@app.route('/figurageometrica/cube/surfacearea/<s>', methods=['GET'])
-def cube_surfacearea(s):
 
-    entero = int(s)
-    surfacearea = 6*(entero**2)
-    return(f"La surfacearea del cubo es:  {str(surfacearea)}")
 
-#volume rectangular_solid
-@app.route('/figurageometrica/rectangular_solid/volume/<l>/<w>/<h>', methods=['GET'])
-def rectangular_solid_volume(l,w,h):
 
-    volume = int(l)*int(w)*int(h)
-    return(f"El volumen de rectangular_solid es:  {str(volume)}")
+
+
+
+
+    #return(f"El volumen de rectangular_solid es:  {str(volume)}")
 
 #surfacearea rectangular_solid
 @app.route('/figurageometrica/rectangular_solid/surfacearea/<l>/<w>/<h>', methods=['GET'])
@@ -363,6 +447,11 @@ def rectangular_solid_surfacearea(l,w,h):
 
     surfacearea = 2*(int(l)*int(w) + int(h)*int(l) + int(w)*int(h))
     return(f"La surfacearea de rectangular_solid es:  {str(surfacearea)}")
+
+
+
+
+
 
 #volume sphere
 @app.route('/figurageometrica/sphere/volume/<r>', methods=['GET'])
@@ -406,12 +495,8 @@ def torus_surfacearea(r,R):
     surfacearea= (math.pi**2)*2*(int(r)*int(R))
     return(f"La surfacearea de torus es:  {str(surfacearea)}")
 
-#volume general_cone_or_pyramid
-@app.route('/figurageometrica/general_cone_or_pyramid/volume/<a>/<h>', methods=['GET'])
-def general_cone_or_pyramid_volume(a,h):
-    
-    volume = (1/3)*int(a)*int(h)
-    return(f"El volume de general_cone_or_pyramid es:  {str(volume)}")
+
+
 
 #volume right_circular_cone
 @app.route('/figurageometrica/right_circular_cone/volume/<r>/<h>', methods=['GET'])
