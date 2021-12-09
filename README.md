@@ -16,7 +16,7 @@
 
     #### Ejemplo
 
-    - URL: localhost:9000/cube/volumen/5
+    - URL: http://127.0.0.1:8080/cubo/volumen/5
   
     ![](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/cuboReadmeVolumen.png)
 
