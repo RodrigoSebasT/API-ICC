@@ -33,7 +33,7 @@
     #### Ejemplo
 
     - URL: localhost:9000/figurageométrica/cube/surfacearea/5/9
-    ![This is an image]()
+    ![This is an image](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/cuboReadmeArea.png)
 
 - ### Volumen de un sólido rectangular:
     #### URL
