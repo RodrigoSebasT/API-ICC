@@ -1,42 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/piramideRectangular.css">
     <title>Document</title>
+    <link rel="stylesheet" href="../css/solidoRectangular.css">
+    <style>
+        * {
+            background-color: black;
+        }
+        .container {
+            position: relative;
+        }
+        .container img {
+            position: absolute;
+            left: 380px;
+            top: 30px;
+            border-radius: 30px;
+            width: 450px;
+            height: 370px;
+            background-color:white;
+        }
+
+        .letras{
+            position: relative;
+        }
+
+        .letras .r {
+            position: absolute;
+            left: 700px;
+            top: 292px;
+            color:black;
+            background-color:transparent;
+            font-size: 30px;
+        }
+        .letras .h {
+            position: absolute;
+            left: 585px;
+            top: 170px;
+            color:black;
+            background-color:transparent;
+            font-size: 28px;
+        }
+    </style>
 </head>
+
 <body>
-    <div id="tridiv">
-        <div class="scene" style="-webkit-transform:rotateX(-20deg) rotateY(-104deg); -moz-transform:rotateX(-20deg) rotateY(-104deg); -ms-transform:rotateX(-20deg) rotateY(-104deg); transform:rotateX(-20deg) rotateY(-104deg); ">
-          <div class="shape pyramid-1 pyr-1">
-            <div class="face-wrapper ft">
-              <div class="face">
-                <div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.282);"></div>
-              </div>
-            </div>
-            <div class="face-wrapper bk">
-              <div class="face">
-                <div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.365);"></div>
-              </div>
-            </div>
-            <div class="face-wrapper lt">
-              <div class="face">
-                <div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.365);"></div>
-              </div>
-            </div>
-            <div class="face-wrapper rt">
-              <div class="face">
-                <div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.365);"></div>
-              </div>
-            </div>
-            <div class="face bm">
-              <div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.365);"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    
+    <div class="container">
+        <img src="https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/piramideRectangular.png" alt="">
+    </div>
+
+
 </body>
 </html>
+
+
+
+
