@@ -508,9 +508,76 @@ def rectangular_solid_surfacearea(l,w,h):
 #volume right_circular_cone
 @app.route('/conoCircularRecto/volumen/<r>/<h>', methods=['GET'])
 def right_circular_cone_volume(r,h):
-    
     volumen = (1/3)*((int(r))**2)*int(h)*(math.pi)
-    return(f"El volume de right_circular_cone es:  {str(volume)}")
+
+    return """
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/solidoRectangular.css">
+    <style>
+        * {
+            background-color: black;
+            color: white;
+            font-family: 'Roboto', sans-serif;
+        }
+        .container {
+            position: relative;
+        }
+        .container img {
+            position: absolute;
+            left: 440px;
+            top:15px;
+            border-radius: 30px;
+            width: 350px;
+            height: 300px;
+            background-color:white;
+        }
+        .container .title {
+            position: relative;
+            top: 20px;
+            font-size: 20px;
+            width: 360px;
+            padding: 15px;
+            left: 10px;
+            border: 2px solid white;
+            border-radius: 20px;
+            text-align: center;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/Copia%20de%20cono.png" alt="">
+        <p class="title">"""+"""r = {}<br>h = {}<br><br>Donde:<br>r: radio del cono circular recto<br>h: altura del cono circular recto<br><br>El volumen del cono circular recto es: {}</p>""".format(int(r),int(h),volumen)+"""</div>
+</body>
+</html>"""
+
+
+
+
+
+
+
+
+
+
+
+
+    #return(f"El volume de right_circular_cone es:  {str(volume)}")
 
 
 
