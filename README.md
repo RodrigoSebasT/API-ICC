@@ -17,8 +17,7 @@
     #### Ejemplo
 
     - URL: localhost:9000/cube/volumen/3
-   
-    ![Imagen de un cubo](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/cuboReadmeVolumen.png)
+    ![https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/cuboReadmeVolumen.png]()
 
 - ### Área de superficie de un cubo:
     #### URL
@@ -32,7 +31,7 @@
 
     #### Ejemplo
 
-    - URL: localhost:9000/figurageométrica/cube/surfacearea/3
+    - URL: localhost:9000/figurageométrica/cube/surfacearea/5/9
     ![This is an image]()
 
 - ### Volumen de un sólido rectangular:
@@ -96,7 +95,7 @@
 
     #### Ejemplo
 
-    - URL: localhost:9000/figurageométrica/sphere/surfacearea/3
+    - URL: localhost:9000/figurageométrica/sphere/surfacearea/6
     ![This is an image]()
 
  - ### Volumen de un cilindro circular recto:
