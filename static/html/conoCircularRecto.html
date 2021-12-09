@@ -1,22 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style></style>
-    
+    <link rel="stylesheet" href="../css/solidoRectangular.css">
+    <style>
+        * {
+            background-color: black;
+        }
+        .container {
+            position: relative;
+        }
+        .container img {
+            position: absolute;
+            left: 380px;
+            top: 30px;
+            border-radius: 30px;
+            width: 450px;
+            height: 370px;
+            background-color:white;
+        }
+
+        .letras{
+            position: relative;
+        }
+
+        .letras .r {
+            position: absolute;
+            left: 700px;
+            top: 292px;
+            color:black;
+            background-color:transparent;
+            font-size: 30px;
+        }
+        .letras .h {
+            position: absolute;
+            left: 585px;
+            top: 170px;
+            color:black;
+            background-color:transparent;
+            font-size: 28px;
+        }
+    </style>
 </head>
+
 <body>
-    <div>
-        <img src="" alt="">
+    <div class="container">
+        <img src="https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/conoRecto.png" alt="">
+    </div>
+    <div class="letras">
+        <p class='r'>r</p>
+        <p class='h'>h</p>
     </div>
 
-    <div>
-        <p></p>
-        <p></p>
-        <p></p>
-    </div>
 
-
-    
 </body>
 </html>

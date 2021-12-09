@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-from flask import Flask, render_template, flash, url_for
-from math import pi
-=======
 from flask import Flask, render_template
+from math import pi
 import math
->>>>>>> e83ca76c16bc3b8f225e2e52e13d5159ce498e52
 
 app = Flask(__name__)
 
@@ -12,8 +8,7 @@ app = Flask(__name__)
 def static_content(content):
     return render_template(content)
 
-<<<<<<< HEAD
-#no editar nada de arriba
+
 @app.route('/toroide/<opcion>/<r>/<R>', methods=['GET'])
 def calcularToroide(opcion,r,R):
     r = float(r)
@@ -190,7 +185,7 @@ def calcularTetraedro(opcion,l):
                                 
                                 
                             </body>"""
-=======
+
 @app.route('/name/<name>', methods=['GET'])
 def ejemplo(name):
     return f"Hola, {name}"
@@ -328,7 +323,6 @@ def regular_tetrahedron_surfacearea(s):
    
     surfacearea= math.sqrt(3)*(int(s)**2)
     return(f"La surfacearea de regular_tetrahedron es:  {str(surfacearea)}")
->>>>>>> e83ca76c16bc3b8f225e2e52e13d5159ce498e52
 
 if __name__ == '__main__':
     app.secret_key = ".."
