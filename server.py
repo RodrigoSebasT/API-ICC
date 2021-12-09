@@ -9,8 +9,8 @@ app = Flask(__name__)
 #volumen del cubo
 @app.route('/cubo/volumen/<s>', methods=['GET'])
 def cube_volume(s):
-    entero = int(s)
-    volumen = (entero)**3
+    lado = int(s)
+    volumen = (lado)**3
     
     return """
             <!DOCTYPE html>
@@ -63,15 +63,15 @@ def cube_volume(s):
         <body>
             <div class="container">
                 <img src="https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/cubo.png" alt="">
-                <p class="title">"""+"""s = {}<br><br>Donde:<br>s: lado del cubo<br><br>El volumen del cubo es: {}</p>""".format(entero,volumen)+"""</div>
+                <p class="title">"""+"""s = {}<br><br>Donde:<br>s: lado del cubo<br><br>El volumen del cubo es: {}</p>""".format(lado,volumen)+"""</div>
         </body>
         </html>"""
 
 #area superficial del cubo
 @app.route('/cubo/surfacearea/<s>', methods=['GET'])
 def cube_surfacearea(s):
-    entero = int(s)
-    surfacearea = 6*((entero)**2)
+    lado = int(s)
+    surfacearea = 6*((lado)**2)
     return """
             <!DOCTYPE html>
         <html lang="en">
@@ -123,7 +123,7 @@ def cube_surfacearea(s):
         <body>
             <div class="container">
                 <img src="https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/cubo.png" alt="">
-                <p class="title">"""+"""s = {}<br><br>Donde:<br>s: lado del cubo<br><br>El área superficial del cubo es: {}</p>""".format(entero,surfacearea)+"""</div>
+                <p class="title">"""+"""s = {}<br><br>Donde:<br>s: lado del cubo<br><br>El área superficial del cubo es: {}</p>""".format(lado,surfacearea)+"""</div>
         </body>
         </html>"""
 
