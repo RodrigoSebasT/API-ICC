@@ -16,7 +16,7 @@
 
     #### Ejemplo
 
-    - URL: http://127.0.0.1:8080/cubo/volumen/5
+    - URL: localhost:9000/cube/volumen/5
   
     ![](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/cuboReadmeVolumen.png)
 
@@ -33,7 +33,7 @@
     #### Ejemplo
 
     - URL: localhost:9000/figurageométrica/cube/surfacearea/5/9
-    ![This is an image](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/cuboReadmeArea.png)
+    ![This is an image]()
 
 - ### Volumen de un sólido rectangular:
     #### URL
@@ -66,7 +66,7 @@
 
     #### Ejemplo
 
-    - URL: localhost:9000/figurageométrica/rectangular_solid/surfacearea/3
+    - URL: localhost:9000/figurageométrica/rectangular_solid/surfacearea/8/5/4
     ![This is an image]()
 
 - ### Volumen de una esfera:
