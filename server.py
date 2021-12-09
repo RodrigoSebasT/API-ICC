@@ -991,7 +991,7 @@ def right_circular_cylinder_volume(r,h):
                     top:15px;
                     border-radius: 30px;
                     width: 350px;
-                    height: 315px;
+                    height: 330px;
                     background-color:white;
                 }
                 .container .title {
@@ -1011,7 +1011,7 @@ def right_circular_cylinder_volume(r,h):
 
         <body>
             <div class="container">
-                <img src="https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/troncoCono.jpg" alt="">
+                <img src="https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/cilindroo.png" alt="">
                 <p class="title">"""+"""r = {}<br>h = {}<br><br>Donde:<br>r: radio de la base del cilindro circular recto<br>h: altura del cilindro circular recto<br><br>El volumen del cilindro circular recto es: {}</p>""".format(int(r),int(h),volumen)+"""</div>
         </body>
         </html>"""
@@ -1023,19 +1023,192 @@ def right_circular_cylinder_volume(r,h):
 
 
 
-
-
-
-
 #surfacearea right_circular_cylinder
-@app.route('/figurageometrica/right_circular_cylinder/surfacearea/<r>/<h>', methods=['GET'])
+@app.route('/cilindroCircularRecto/surfacearea/<r>/<h>', methods=['GET'])
 def right_circular_cylinder_surfacearea(r,h):
+    surfacearea= (math.pi)*2*((int(r)*int(h)) + ((int(r))**2)) 
     
-    surfacearea= math.pi*2(int(r)*int(h) + int(r)**2)
-    return(f"La surfacearea de la right_circular_cylinder es:  {str(surfacearea)}")
+    return """<!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+        </head>
+        <body>
+            <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+            <link rel="stylesheet" href="../css/solidoRectangular.css">
+            <style>
+                * {
+                    background-color: black;
+                    color: white;
+                    font-family: 'Roboto', sans-serif;
+                }
+                .container {
+                    position: relative;
+                }
+                .container img {
+                    position: absolute;
+                    left: 440px;
+                    top:15px;
+                    border-radius: 30px;
+                    width: 350px;
+                    height: 330px;
+                    background-color:white;
+                }
+                .container .title {
+                    position: relative;
+                    top: 20px;
+                    font-size: 20px;
+                    width: 360px;
+                    padding: 15px;
+                    left: 10px;
+                    border: 2px solid white;
+                    border-radius: 20px;
+                    text-align: center;
+                }
+                
+            </style>
+        </head>
+
+        <body>
+            <div class="container">
+                <img src="https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/cilindroo.png" alt="">
+                <p class="title">"""+"""r = {}<br>h = {}<br><br>Donde:<br>r: radio de la base del cilindro circular recto<br>h: altura del cilindro circular recto<br><br>El área superficial del cilindro circular recto es: {}</p>""".format(int(r),int(h),surfacearea)+"""</div>
+        </body>
+        </html>"""
 
 
 
+
+
+#volume square_pyramid
+@app.route('/piramideCuadrangular/volumen/<s>/<h>', methods=['GET'])
+def square_pyramid_volume(s,h):
+    volumen = (1/3)*((int(s))**2)*(int(h))
+    
+    return """<!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+        </head>
+        <body>
+            <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+            <link rel="stylesheet" href="../css/solidoRectangular.css">
+            <style>
+                * {
+                    background-color: black;
+                    color: white;
+                    font-family: 'Roboto', sans-serif;
+                }
+                .container {
+                    position: relative;
+                }
+                .container img {
+                    position: absolute;
+                    left: 440px;
+                    top:15px;
+                    border-radius: 30px;
+                    width: 350px;
+                    height: 330px;
+                    background-color:white;
+                }
+                .container .title {
+                    position: relative;
+                    top: 20px;
+                    font-size: 20px;
+                    width: 360px;
+                    padding: 15px;
+                    left: 10px;
+                    border: 2px solid white;
+                    border-radius: 20px;
+                    text-align: center;
+                }
+                
+            </style>
+        </head>
+
+        <body>
+            <div class="container">
+                <img src="https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/piramideRectangular.png" alt="">
+                <p class="title">"""+"""l = {}<br>h = {}<br><br>Donde:<br>l: longitud del lado de la base de la pirámide<br>h: altura de la pirámide<br><br>El volumen de la pirámide cuadrangular es: {}</p>""".format(int(s),int(h),volumen)+"""</div>
+        </body>
+        </html>"""
+
+
+
+
+#surfacearea square_pyramid
+@app.route('/piramideCuadrangular/surfacearea/<s>/<h>', methods=['GET'])
+def square_pyramid_surfacearea(h,s):
+    surfacearea= (int(s))*((int(s)) + (math.sqrt(((int(s))**2) + (4*((int(h))**2)))))
+
+    return """<!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+        </head>
+        <body>
+            <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+            <link rel="stylesheet" href="../css/solidoRectangular.css">
+            <style>
+                * {
+                    background-color: black;
+                    color: white;
+                    font-family: 'Roboto', sans-serif;
+                }
+                .container {
+                    position: relative;
+                }
+                .container img {
+                    position: absolute;
+                    left: 440px;
+                    top:15px;
+                    border-radius: 30px;
+                    width: 350px;
+                    height: 330px;
+                    background-color:white;
+                }
+                .container .title {
+                    position: relative;
+                    top: 20px;
+                    font-size: 20px;
+                    width: 360px;
+                    padding: 15px;
+                    left: 10px;
+                    border: 2px solid white;
+                    border-radius: 20px;
+                    text-align: center;
+                }
+                
+            </style>
+        </head>
+
+        <body>
+            <div class="container">
+                <img src="https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/piramideRectangular.png" alt="">
+                <p class="title">"""+"""l = {}<br>h = {}<br><br>Donde:<br>l: longitud del lado de la base de la pirámide<br>h: altura de la pirámide<br><br>El área superficial de la pirámide cuadrangular es: {}</p>""".format(int(s),int(h),surfacearea)+"""</div>
+        </body>
+        </html>"""
 
 
 
@@ -1043,50 +1216,149 @@ def right_circular_cylinder_surfacearea(r,h):
 
 
 #volume torus
-@app.route('/figurageometrica/torus/volume/<r>/<R>', methods=['GET'])
-def torus_volume(r,R):
-    
-    volume = (int(r)**2)*int(R)*(math.pi**2)*2
-    return(f"El volume de torus es:  {str(volume)}")
+@app.route('/toroide/volumen/<r>/<R>', methods=['GET'])
+def torus_volumen(r,R):
+    volumen = ((int(r))**2)*(int(R))*((math.pi)**2)*2
+
+    return """<!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+        </head>
+        <body>
+            <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+            <link rel="stylesheet" href="../css/solidoRectangular.css">
+            <style>
+                * {
+                    background-color: black;
+                    color: white;
+                    font-family: 'Roboto', sans-serif;
+                }
+                .container {
+                    position: relative;
+                }
+                .container img {
+                    position: absolute;
+                    left: 440px;
+                    top:15px;
+                    border-radius: 30px;
+                    width: 370px;
+                    height: 350px;
+                    background-color:white;
+                }
+                .container .title {
+                    position: relative;
+                    top: 20px;
+                    font-size: 20px;
+                    width: 360px;
+                    padding: 15px;
+                    left: 10px;
+                    border: 2px solid white;
+                    border-radius: 20px;
+                    text-align: center;
+                }
+                
+            </style>
+        </head>
+
+        <body>
+            <div class="container">
+                <img src="https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/toro.png" alt="">
+                <p class="title">"""+"""r = {}<br>R = {}<br><br>Donde:<br>r: radio del tubo<br>R: radio del toroide<br><br>El volumen del toroide es: {}</p>""".format(int(r),int(R),volumen)+"""</div>
+        </body>
+        </html>"""
+
+
+
+
+
+
+
 
 #surfacearea torus
-@app.route('/figurageometrica/torus/surfacearea/<r>/<R>', methods=['GET'])
+@app.route('/toroide/surfacearea/<r>/<R>', methods=['GET'])
 def torus_surfacearea(r,R):
-    
-    surfacearea= (math.pi**2)*2*(int(r)*int(R))
-    return(f"La surfacearea de torus es:  {str(surfacearea)}")
+    surfacearea= ((math.pi)**2)*4*(int(r))*(int(R))
+
+    return """<!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+        </head>
+        <body>
+            <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+            <link rel="stylesheet" href="../css/solidoRectangular.css">
+            <style>
+                * {
+                    background-color: black;
+                    color: white;
+                    font-family: 'Roboto', sans-serif;
+                }
+                .container {
+                    position: relative;
+                }
+                .container img {
+                    position: absolute;
+                    left: 440px;
+                    top:15px;
+                    border-radius: 30px;
+                    width: 370px;
+                    height: 350px;
+                    background-color:white;
+                }
+                .container .title {
+                    position: relative;
+                    top: 20px;
+                    font-size: 20px;
+                    width: 360px;
+                    padding: 15px;
+                    left: 10px;
+                    border: 2px solid white;
+                    border-radius: 20px;
+                    text-align: center;
+                }
+                
+            </style>
+        </head>
+
+        <body>
+            <div class="container">
+                <img src="https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/toro.png" alt="">
+                <p class="title">"""+"""r = {}<br>R = {}<br><br>Donde:<br>r: radio del tubo<br>R: radio del toroide<br><br>El área superficial del toroide es: {}</p>""".format(int(r),int(R),surfacearea)+"""</div>
+        </body>
+        </html>"""
 
 
 
 
-
-
-#volume square_pyramid
-@app.route('/figurageometrica/square_pyramid/volume/<s>/<h>', methods=['GET'])
-def square_pyramid_volume(s,h):
-    
-    volume = (1/3)*(int(s)**2)*int(h)
-    return(f"El volume de square_pyramid es:  {str(volume)}")
-
-#surfacearea square_pyramid
-@app.route('/figurageometrica/square_pyramid/surfacearea/<r>/<R>/<h>/<s>', methods=['GET'])
-def square_pyramid_surfacearea(h,s):
-    
-    surfacearea= int(s)(int(s) + math.sqrt(int(s)**2 + 4*(int(h)**2)))
-    return(f"La surfacearea de square_pyramid es:  {str(surfacearea)}")
 
 #volume regular_tetrahedron
-@app.route('/figurageometrica/regular_tetrahedron/volume/<s>', methods=['GET'])
+@app.route('/tetraedroRegular/volumen/<s>', methods=['GET'])
 def regular_tetrahedron_volume(s):
-    
-    volume = (1/12)*math.sqrt(2)*(int(s)**3)
+    volumen = (1/12)*(math.sqrt(2))*((int(s))**3)
     return(f"El volume de regular_tetrahedron es:  {str(volume)}")
 
+
+
+
 #surfacearea regular_tetrahedron
-@app.route('/figurageometrica/regular_tetrahedron/surfacearea/<s>', methods=['GET'])
+@app.route('/tetraedroRegular/surfacearea/<s>', methods=['GET'])
 def regular_tetrahedron_surfacearea(s):
-   
-    surfacearea= math.sqrt(3)*(int(s)**2)
+    surfacearea= (math.sqrt(3))*((int(s))**2)
     return(f"La surfacearea de regular_tetrahedron es:  {str(surfacearea)}")
 
 
