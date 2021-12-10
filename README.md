@@ -17,18 +17,18 @@ En esta primera version, decidimos implementar la API para diez figuras geometri
 
 Necesitas las siguientes herramientas para ejecutar nuestra API
 
+-Python 3.0+
 -Flask 2.0+
 
 ## Ejecución de la API:
 
 Una vez instalados todos los programas necesarios, solo necesitas clonar nuestro repositorio:
 
-`git clone`
+`git clone https://github.com/RodrigoSebasT/API-ICC.git`
 
 Despues de ello, entra a nuestro proyecto y ejecútalo:
 
 `python3 server.py`
-
 
 ## Nombre de integrantes:
 1. Rodrigo Sebastian Trujillo Mirano
