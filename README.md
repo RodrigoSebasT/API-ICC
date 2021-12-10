@@ -158,7 +158,7 @@ En esta primera version, decidimos implementar la API para diez figuras geometri
 
  - ### Volumen del toroide:
     #### URL
-    http://127.0.0.1:8080/torus/volume/:r/:R
+    http://127.0.0.1:8080/toroide/volumen/:r/:R
 
     #### Parametros
     - r: Radio del tubo
@@ -169,12 +169,12 @@ En esta primera version, decidimos implementar la API para diez figuras geometri
 
     #### Ejemplo
 
-    - URL: http://127.0.0.1:8080/torus/volume/1/116
+    - URL: http://127.0.0.1:8080/toroide/volumen/1/116
     ![This is an image](https://github.com/RodrigoSebasT/API-ICC/blob/main/static/toroide%20volumen.PNG)
 
 - ### Área superficial del toroide:
     #### URL
-    http://127.0.0.1:8080/torus/surfacearea/:r/:R
+    http://127.0.0.1:8080/toroide/surfacearea/:r/:R
 
     #### Parametros
     - r: Radio del tubo
@@ -185,13 +185,13 @@ En esta primera version, decidimos implementar la API para diez figuras geometri
 
     #### Ejemplo
 
-    - URL: http://127.0.0.1:8080/torus/surfacearea/1/12
+    - URL: http://127.0.0.1:8080/toroide/surfacearea/1/12
     ![This is an image](https://github.com/RodrigoSebasT/API-ICC/blob/main/static/toroide%20area.PNG)
 
 
  - ### Volumen de un cono o pirámide general:
     #### URL
-    http://127.0.0.1:8080/general_cone_or_pyramid/volume/:a/:h
+    http://127.0.0.1:8080/conoGeneraloPiramide/volumen/:a/:h
 
     #### Parametros
     - a: Área de la base del cono o pirámide general
@@ -202,12 +202,12 @@ En esta primera version, decidimos implementar la API para diez figuras geometri
 
     #### Ejemplo
 
-    - URL: http://127.0.0.1:8080/general_cone_or_pyramid/volume/3/19
+    - URL: http://127.0.0.1:8080/conoGeneraloPiramide/volumen/3/19
     ![This is an image](https://github.com/RodrigoSebasT/API-ICC/blob/main/static/cono%20general%20o%20piramide%20volumen.PNG)
 
  - ### Volumen general del cono circular recto:
     #### URL
-    http://127.0.0.1:8080/right_circular_cone/volume/:r/:h
+    http://127.0.0.1:8080/conoCircularRecto/volumen/:r/:h
 
     #### Parametros
     - r: Radio del cono circular recto
@@ -218,12 +218,12 @@ En esta primera version, decidimos implementar la API para diez figuras geometri
 
     #### Ejemplo
 
-    - URL: http://127.0.0.1:8080/right_circular_cone/volume/8/9
+    - URL: http://127.0.0.1:8080/conoCircularRecto/volumen/8/9
     ![This is an image](https://github.com/RodrigoSebasT/API-ICC/blob/main/static/cono%20circular%20recto%20volumen.PNG)
 
 - ### Área de superficial del cono circular recto:
     #### URL
-    http://127.0.0.1:8080/right_circular_cone/surfacearea/:r/:h
+    http://127.0.0.1:8080/conoCircularRecto/surfacearea/:r/:h
 
     #### Parametros
     - r: Radio del cono circular recto
@@ -234,7 +234,7 @@ En esta primera version, decidimos implementar la API para diez figuras geometri
 
     #### Ejemplo
 
-    - URL: http://127.0.0.1:8080/right_circular_cone/surfacearea/8/13
+    - URL: http://127.0.0.1:8080/conoCircularRecto/surfacearea/8/13
     ![This is an image](https://github.com/RodrigoSebasT/API-ICC/blob/main/static/cono%20circular%20recto%20areqa.PNG)
 
  - ### Volumen general del tronco de cono:
