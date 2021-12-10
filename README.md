@@ -64,7 +64,7 @@
     - h: Altura del solido rectangular
 
     #### Salida
-    Área de superficie de un solido rectangular
+    Área superficial de un solido rectangular
 
     #### Ejemplo
 
@@ -141,21 +141,21 @@
 
  - ### Volumen de un torus:
     #### URL
-    /figurageometrica/torus/volume/r/R
+    /figurageometrica/torus/volumen/r/R
 
     #### Parametros
     - r: Radio del tubo
     - R: Radio del torus
     
     #### Salida
-    Volumen de un torus
+    Volumen de un toroide
 
     #### Ejemplo
 
     - URL: localhost:9000/figurageometrica/torus/volume/l/w/h
     ![This is an image]()
 
-- ### Área de superficie de un cilindro circular derecho:
+- ### Área superficial de un cilindro circular recto:
     #### URL
     /figurageometrica/torus/surfacearea/r/R
 
