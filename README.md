@@ -1,14 +1,29 @@
-## Nombre del proyecto:
+#Geometría Para Todos
 ## Descripción del proyecto:
+Creamos una API que ayuda a calcular el volumen y el área superficial de un figura geometrica del espacio.
+En esta primera version, decidimos implementar la API para diez figuras geometricas. 
+1. El cubo
+2. El sólido rectangular
+3. La esfera
+4. El cilindro circular recto
+5. El toroide
+6. El cono o pirámide general (para esta figura solo se implemento su volumen)
+7. El cono circular recto
+8. El tronco de un cono
+9. La pirámide cuadrangular
+10. El tetraedro regular
+
 ## Nombre de integrantes:
-## ID de GitHub: 
+1. Rodrigo Sebastian Trujillo Mirano
+
+
 ## Especificación del API
 
 - ### Volumen de un cubo:
     #### URL
-    /cube/volumen/s
+    http://127.0.0.1:8080/cubo/volumen/:s
 
-    #### Parametros
+    #### Parámetros
     - s: Lado del cubo
 
     #### Salida
@@ -22,58 +37,61 @@
 
 - ### Área superficial de un cubo:
     #### URL
-    /cube/surfacearea/s
-
-    #### Parametros
+    http://127.0.0.1:8080/cubo/surfacearea/:s
+    
+    #### Parámetros
     - s: Lado del cubo
 
     #### Salida
-    Área de superficie de un cubo
+    Área superficial de un cubo
 
     #### Ejemplo
 
-    - URL: http://127.0.0.1:8080/cube/surfacearea/5/9
-    ![This is an image]()
+    - URL: http://127.0.0.1:8080/cubo/surfacearea/5
+    
+    ![This is an image](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/cuboReadmeArea.png)
 
 - ### Volumen de un sólido rectangular:
     #### URL
-    /rectangular_solid/volume/l/w/h
+    http://127.0.0.1:8080/solidoRectangular/volumen/:l/:w/:h
 
-    #### Parametros
-    - l: Largo del solido rectangular
-    - w: Ancho del solido rectangular
-    - h: Altura del solido rectangular
+    #### Parámetros
+    - l: Largo del sólido rectangular
+    - w: Ancho del sólido rectangular
+    - h: Altura del sólido rectangular
 
     #### Salida
-    Volumen de un solido rectangular
+    Volumen de un sólido rectangular
 
     #### Ejemplo
 
-    - URL: http://127.0.0.1:8080/rectangular_solid/volume/l/w/h
-    ![This is an image]()
+    - URL: http://127.0.0.1:8080/solidoRectangular/volumen/8/5/4
+    
+    ![This is an image](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/RectanguloVolumenReadme.png)
 
-- ### Área superficial de un solido rectangular:
+- ### Área superficial de un sólido rectangular:
     #### URL
-    /rectangular_solid/surfacearea/l/w/h
+    http://127.0.0.1:8080/solidoRectangular/surfacearea/:l/:w/:h
 
-    #### Parametros
+    #### Parámetros
     - l: Largo del solido rectangular
     - w: Ancho del solido rectangular
     - h: Altura del solido rectangular
 
     #### Salida
-    Área superficial de un solido rectangular
+    Área de superficie de un solido rectangular
 
     #### Ejemplo
 
-    - URL: http://127.0.0.1:8080/rectangular_solid/surfacearea/8/5/4
-    ![This is an image]()
+    - URL: http://127.0.0.1:8080/solidoRectangular/surfacearea/8/5/4
+    
+    ![This is an image](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/RectanguloAreaReadme.png)
 
 - ### Volumen de una esfera:
     #### URL
-    /sphere/volume/r
+    http://127.0.0.1:8080/esfera/volumen/:r
 
-    #### Parametros
+    #### Parámetros
     - r: Radio de la esfera
     
     #### Salida
@@ -81,14 +99,15 @@
 
     #### Ejemplo
 
-    - URL: http://127.0.0.1:8080/sphere/volume/l/w/h
-    ![This is an image]()
+    - URL: http://127.0.0.1:8080/esfera/volumen/6
+   
+    ![This is an image](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/VolumenEsferaReadme.png)
 
-- ### Área superficial de una esfera:
+- ### Área de superficie de una esfera:
     #### URL
-    /sphere/surfacearea/l/w/h
+    http://127.0.0.1:8080/esfera/surfacearea/:r
 
-    #### Parametros
+    #### Parámetros
     - r: Radio de la esfera
 
     #### Salida
@@ -96,14 +115,15 @@
 
     #### Ejemplo
 
-    - URL: http://127.0.0.1:8080/sphere/surfacearea/6
-    ![This is an image]()
+    - URL: http://127.0.0.1:8080/esfera/surfacearea/6
+    
+    ![This is an image](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/AreaEsferaReadme.png)
 
  - ### Volumen de un cilindro circular recto:
     #### URL
-    /right_circular_cylinder/volume/r/h
+    http://127.0.0.1:8080/cilindroCircularRecto/volumen/:r/:h
 
-    #### Parametros
+    #### Parámetros
     - r: Radio del cilindro circular recto
     - h: Altura del clindro circular recto
     
@@ -112,14 +132,15 @@
 
     #### Ejemplo
 
-    - URL: http://127.0.0.1:8080/right_circular_cylinder/volume/8/9
-    ![This is an image](https://github.com/RodrigoSebasT/API-ICC/blob/main/static/cono%20circular%20recto%20volumen.PNG)
+    - URL: http://127.0.0.1:8080/cilindroCircularRecto/volumen/8/4
+    
+    ![This is an image](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/cilindro%20circular%20volumen.PNG)
 
 - ### Área superficial de un cilindro circular recto:
     #### URL
-    /right_circular_cylinder/surfacearea/r/h
+    http://127.0.0.1:8080/cilindroCircularRecto/surfacearea/:r/:h
 
-    #### Parametros
+    #### Parámetros
     - r: Radio del cilindro circular recto
     - h: Altura del clindro circular recto
 
@@ -128,62 +149,63 @@
 
     #### Ejemplo
 
-    - URL: http://127.0.0.1:8080/right_circular_cylinder/surfacearea/8/13
-    ![This is an image](https://github.com/RodrigoSebasT/API-ICC/blob/main/static/cono%20circular%20recto%20areqa.PNG)
+    - URL: http://127.0.0.1:8080/cilindroCircularRecto/surfacearea/8/13
+    
+    ![This is an image](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/cilindro%20circular%20area.PNG)
 
 
- - ### Volumen del toroide:
+ - ### Volumen de un torus:
     #### URL
-    /torus/volume/r/R
+    /figurageometrica/torus/volume/r/R
 
     #### Parametros
     - r: Radio del tubo
-    - R: Radio del toroide
+    - R: Radio del torus
     
     #### Salida
     Volumen de un torus
 
     #### Ejemplo
 
-    - URL: http://127.0.0.1:8080/torus/volume/1/116
-    ![This is an image](https://github.com/RodrigoSebasT/API-ICC/blob/main/static/toroide%20volumen.PNG)
+    - URL: localhost:9000/figurageometrica/torus/volume/l/w/h
+    ![This is an image]()
 
-- ### Área superficial del toroide:
+- ### Área de superficie de un cilindro circular derecho:
     #### URL
-    /torus/surfacearea/r/R
+    /figurageometrica/torus/surfacearea/r/R
 
     #### Parametros
     - r: Radio del tubo
     - R: Radio del torus
 
     #### Salida
-    Área superficial del toroide 
+    Área de superficie de un torus
 
     #### Ejemplo
 
-    - URL: http://127.0.0.1:8080/torus/surfacearea/1/12
-    ![This is an image](https://github.com/RodrigoSebasT/API-ICC/blob/main/static/toroide%20area.PNG)
+    - URL: localhost:9000/figurageométrica/torus/surfacearea/3
+    - Salida: 27 (o screenshot de la salida en caso existan gráficos)
 
 
- - ### Volumen del cono o pirámide general:
+ - ### Volumen general de un cono o pirámide:
     #### URL
-    /general_cone_or_pyramid/volume/a/h
+    /figurageometrica/general_cone_or_pyramid/volume/a/h
 
     #### Parametros
-    - a: Área de la base del cono o pirámide general
-    - h: Altura del cono o pirámide general
+    - a: Área de la base del cono o pirámide
+    - h: Altura del cono o piramide
     
     #### Salida
-    Volumen del cono o pirámide general
+    Volumen de un cono o piramide
 
     #### Ejemplo
 
-    - URL: http://127.0.0.1:8080/general_cone_or_pyramid/volume/3/19
-    ![This is an image](https://github.com/RodrigoSebasT/API-ICC/blob/main/static/cono%20general%20o%20piramide%20volumen.PNG)
+    - URL: localhost:9000/figurageometrica/general_cone_or_pyramid/volume/l/w/h
+    ![This is an image]()
 
  - ### Volumen general de un cono circular recto:
     #### URL
-    /right_circular_cone/volume/r/h
+    /figurageometrica/right_circular_cone/volume/r/h
 
     #### Parametros
     - r: Radio del cono circular
@@ -194,28 +216,28 @@
 
     #### Ejemplo
 
-    - URL: http://127.0.0.1:8080/right_circular_cone/volume/8/9
-    ![This is an image](https://github.com/RodrigoSebasT/API-ICC/blob/main/static/cono%20circular%20recto%20volumen.PNG)
+    - URL: localhost:9000/figurageometrica/right_circular_cone/volume/l/w/h
+    ![This is an image]()
 
-- ### Área superficial de un cono circular recto:
+- ### Área de superficie de un cono circular recto:
     #### URL
-    /right_circular_cone/surfacearea/r/h
+    /figurageometrica/right_circular_cone/surfacearea/r/h
 
     #### Parametros
     - r: Radio del cono circular recto
     - h: Altura del cono circular recto
 
     #### Salida
-    Área superficial de un cono circular recto
+    Área de superficie de un cono circular recto
 
     #### Ejemplo
 
-    - URL: http://127.0.0.1:8080/right_circular_cone/surfacearea/8/13
-    ![This is an image](https://github.com/RodrigoSebasT/API-ICC/blob/main/static/cono%20circular%20recto%20areqa.PNG)
+    - URL: localhost:9000/figurageométrica/right_circular_cone/surfacearea/3
+    ![This is an image]()
 
- - ### Volumen general del tronco de cono:
+ - ### Volumen general de un cono truncado:
     #### URL
-    /frustum_of_a_cone/volume/r/R/h
+    /figurageometrica/frustum_of_a_cone/volume/r/R/h
 
     #### Parametros
     - r: Radio superior del cono truncado
@@ -227,12 +249,12 @@
 
     #### Ejemplo
 
-    - URL: http://127.0.0.1:8080/frustum_of_a_cone/volume/4/5/4
-    ![This is an image](https://github.com/RodrigoSebasT/API-ICC/blob/main/static/tronco%20de%20cono%20volumen.PNG)
+    - URL: http://127.0.0.1:8080/troncoDeCono/volumen/4/5/4
+    ![This is an image](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/tronco%20de%20cono%20volumen.PNG)
 
-- ### Área superficial del tronco de cono:
+- ### Área de superficie de un cono truncado:
     #### URL
-    /frustum_of_a_cone/surfacearea/r/R/s
+    /figurageometrica/frustum_of_a_cone/surfacearea/r/R/s
 
     #### Parametros
     - r: Radio superior del cono truncado
@@ -240,72 +262,72 @@
     - s:  Altura inclinada del cono truncado
 
     #### Salida
-    Área superficial de un cono truncado
+    Área de superficie de un cono truncado
 
     #### Ejemplo
 
-    - URL: http://127.0.0.1:8080/frustum_of_a_cone/surfacearea/5/12/4
+    - URL: http://127.0.0.1:8080/troncoDeCono/surfacearea/5/12/4
     ![This is an image](https://github.com/RodrigoSebasT/API-ICC/blob/main/static/tronco%20de%20cono%20area%20superficial.PNG)
 
- - ### Volumen general de una pirámide cuadrangular:
+ - ### Volumen general de una pirámide cuadrada:
     #### URL
-    /square_pyramid/volume/s/h
+    /figurageometrica/square_pyramid/volume/s/h
 
     #### Parametros
     - s: Lado de la pirámide cuadrada
     - h: altura de la pirámide cuadrada 
     
     #### Salida
-    Volumen de una pirámide cuadrangular
+    Volumen de una pirámide cuadrada
 
     #### Ejemplo
 
-    - URL: http://127.0.0.1:8080/square_pyramid/volume/5/4
-    ![This is an image](https://github.com/RodrigoSebasT/API-ICC/blob/main/static/piramide%20cuadrangular%20volumen.PNG)
+    - URL: http://127.0.0.1:8080/piramideCuadrangular/volumen/5/4
+    ![This is an image](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/piramide%20cuadrangular%20volumen.PNG)
 
-- ### Área superficial de la pirámide cuadrangular:
+- ### Área de superficie de un square_pyramid:
     #### URL
-    /square_pyramid/surfacearea/s/h
+    /figurageometrica/square_pyramid/surfacearea/s/h
 
     #### Parametros
-    - s: Lado de la pirámide cuadrangular
-    - h: altura de la pirámide cuadrangular
+    - s: Lado de la pirámide cuadrada
+    - h: altura de la pirámide cuadrada
 
     #### Salida
-    Área superficiale de la pirámide cuadrangular
+    Área de superficie de la pirámide cuadrada
 
     #### Ejemplo
 
-    - URL: http://127.0.0.1:8080/square_pyramid/surfacearea/2/9
+    - URL: http://127.0.0.1:8080/piramideCuadrangular/surfacearea/2/9
     ![This is an image](https://github.com/RodrigoSebasT/API-ICC/blob/main/static/piramide%20area%20superficial.PNG)
 
  - ### Volumen general de un tetrahedro regular:
     #### URL
-    /regular_tetrahedron/volume/s
+    /figurageometrica/regular_tetrahedron/volume/s
 
     #### Parametros
     - s:  lado del tetrahedro regular
     
     #### Salida
-    Volumen del tetraedro regular
+    Volumen de un regular_tetrahedron
 
     ##### Ejemplo
 
-    - URL: http://127.0.0.1:8080/regular_tetrahedron/volume/10
+    - URL: http://127.0.0.1:8080/tetraedroRegular/volumen/10
     -![This is an image](https://github.com/RodrigoSebasT/API-ICC/blob/main/static/tetaedro%20regular%20volumen.PNG)
 
-- ### Área superficial del tetraedro regular:
+- ### Área de superficie de un regular_tetrahedron:
     #### URL
-    /regular_tetrahedron/surfacearea/s
+    /figurageometrica/regular_tetrahedron/surfacearea/s
 
     #### Parametros
     - s: Lado del tetrahedro regular
 
     #### Salida
-    Área superficial del tetraedro regular
+    Área de superficie de un regular_tetrahedron
 
     #### Ejemplo
 
-    - URL: http://127.0.0.1:8080/regular_tetrahedron/surfacearea/10
-    ![This is an image](https://github.com/RodrigoSebasT/API-ICC/blob/main/static/tetaedro%20regular%20area.PNG)
+    - URL:  http://127.0.0.1:8080/tetraedroregular/surfacearea/10
+    ![This is an image](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/tetaedro%20regular%20area.PNG)
 
