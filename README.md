@@ -15,6 +15,7 @@ En esta primera version, decidimos implementar la API para diez figuras geometri
 
 ## Nombre de integrantes:
 1. Rodrigo Sebastian Trujillo Mirano
+2. John Rodrigo Monroy Angeles
 
 
 ## Especificación del API
