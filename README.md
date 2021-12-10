@@ -13,6 +13,23 @@ En esta primera version, decidimos implementar la API para diez figuras geometri
 9. La pirámide cuadrangular
 10. El tetraedro regular
 
+## Instalación:
+
+Necesitas las siguientes herramientas para ejecutar nuestra API
+
+-Flask 2.0+
+
+## Ejecución de la API:
+
+Una vez instalados todos los programas necesarios, solo necesitas clonar nuestro repositorio:
+
+`git clone`
+
+Despues de ello, entra a nuestro proyecto y ejecútalo:
+
+`python3 server.py`
+
+
 ## Nombre de integrantes:
 1. Rodrigo Sebastian Trujillo Mirano
 2. John Rodrigo Monroy Angeles
