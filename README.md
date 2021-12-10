@@ -17,8 +17,12 @@ En esta primera version, decidimos implementar la API para diez figuras geometri
 
 Necesitas las siguientes herramientas para ejecutar nuestra API
 
--Python 3.0+
--Flask 2.0+
+- Python 3.0+
+- Flask 2.0+
+
+Una vez instalado python3, ejecuta el siguiente comando
+
+`pip3 install flask`
 
 ## Ejecución de la API:
 
