@@ -38,7 +38,7 @@
 
 - ### Volumen de un sólido rectangular:
     #### URL
-    /figurageometrica/rectangular_solid/volume/l/w/h
+    http://127.0.0.1:8080/solidoRectangular/volumen/:l/:w/:h
 
     #### Parametros
     - l: Largo del solido rectangular
@@ -50,12 +50,13 @@
 
     #### Ejemplo
 
-    - URL: localhost:9000/figurageometrica/rectangular_solid/volume/l/w/h
-    ![This is an image]()
+    - URL: http://127.0.0.1:8080/solidoRectangular/volumen/8/5/4
+    
+    ![This is an image](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/RectanguloVolumenReadme.png)
 
 - ### Área de superficie de un solido rectangular:
     #### URL
-    figurageometrica/rectangular_solid/surfacearea/l/w/h
+    http://127.0.0.1:8080/solidoRectangular/surfacearea/:l/:w/:h
 
     #### Parametros
     - l: Largo del solido rectangular
@@ -67,8 +68,9 @@
 
     #### Ejemplo
 
-    - URL: localhost:9000/figurageométrica/rectangular_solid/surfacearea/8/5/4
-    ![This is an image]()
+    - URL: http://127.0.0.1:8080/solidoRectangular/surfacearea/8/5/4
+    
+    ![This is an image](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/RectanguloAreaReadme.png)
 
 - ### Volumen de una esfera:
     #### URL
