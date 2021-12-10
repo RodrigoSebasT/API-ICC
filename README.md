@@ -76,9 +76,9 @@ En esta primera version, decidimos implementar la API para diez figuras geometri
     http://127.0.0.1:8080/solidoRectangular/surfacearea/:l/:w/:h
 
     #### Parámetros
-    - l: Largo del solido rectangular
-    - w: Ancho del solido rectangular
-    - h: Altura del solido rectangular
+    - l: Largo del sólido rectangular
+    - w: Ancho del sólido rectangular
+    - h: Altura del sólido rectangular
 
     #### Salida
     Área de superficie de un solido rectangular
@@ -156,72 +156,72 @@ En esta primera version, decidimos implementar la API para diez figuras geometri
     ![This is an image](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/cilindro%20circular%20area.PNG)
 
 
- - ### Volumen de un torus:
+ - ### Volumen del toroide:
     #### URL
     /figurageometrica/torus/volume/r/R
 
     #### Parametros
     - r: Radio del tubo
-    - R: Radio del torus
+    - R: Radio del toroide
     
     #### Salida
-    Volumen de un torus
+    Volumen del toroide
 
     #### Ejemplo
 
-    - URL: localhost:9000/figurageometrica/torus/volume/l/w/h
-    ![This is an image]()
+    - URL: http://127.0.0.1:8080/torus/volume/1/116
+    ![This is an image](https://github.com/RodrigoSebasT/API-ICC/blob/main/static/toroide%20volumen.PNG)
 
-- ### Área de superficie de un cilindro circular derecho:
+- ### Área superficial del toroide:
     #### URL
     /figurageometrica/torus/surfacearea/r/R
 
     #### Parametros
     - r: Radio del tubo
-    - R: Radio del torus
+    - R: Radio del toroide
 
     #### Salida
-    Área de superficie de un torus
+    Área de superficial del toroide
 
     #### Ejemplo
 
-    - URL: localhost:9000/figurageométrica/torus/surfacearea/3
-    - Salida: 27 (o screenshot de la salida en caso existan gráficos)
+    - URL: http://127.0.0.1:8080/torus/surfacearea/1/12
+    ![This is an image](https://github.com/RodrigoSebasT/API-ICC/blob/main/static/toroide%20area.PNG)
 
 
- - ### Volumen general de un cono o pirámide:
+ - ### Volumen de un cono o pirámide general:
     #### URL
     /figurageometrica/general_cone_or_pyramid/volume/a/h
 
     #### Parametros
-    - a: Área de la base del cono o pirámide
-    - h: Altura del cono o piramide
+    - a: Área de la base del cono o pirámide general
+    - h: Altura del cono o piramide general
     
     #### Salida
-    Volumen de un cono o piramide
+    Volumen de un cono o piramide general
 
     #### Ejemplo
 
-    - URL: localhost:9000/figurageometrica/general_cone_or_pyramid/volume/l/w/h
-    ![This is an image]()
+    - URL: http://127.0.0.1:8080/general_cone_or_pyramid/volume/3/19
+    ![This is an image](https://github.com/RodrigoSebasT/API-ICC/blob/main/static/cono%20general%20o%20piramide%20volumen.PNG)
 
- - ### Volumen general de un cono circular recto:
+ - ### Volumen general del cono circular recto:
     #### URL
     /figurageometrica/right_circular_cone/volume/r/h
 
     #### Parametros
-    - r: Radio del cono circular
-    - h: Altura del cono circular
+    - r: Radio del cono circular recto
+    - h: Altura del cono circular recto
     
     #### Salida
-    Volumen de un cono circular recto
+    Volumen del cono circular recto
 
     #### Ejemplo
 
-    - URL: localhost:9000/figurageometrica/right_circular_cone/volume/l/w/h
-    ![This is an image]()
+    - URL: http://127.0.0.1:8080/right_circular_cone/volume/8/9
+    ![This is an image](https://github.com/RodrigoSebasT/API-ICC/blob/main/static/cono%20circular%20recto%20volumen.PNG)
 
-- ### Área de superficie de un cono circular recto:
+- ### Área de superficial del cono circular recto:
     #### URL
     /figurageometrica/right_circular_cone/surfacearea/r/h
 
@@ -230,12 +230,12 @@ En esta primera version, decidimos implementar la API para diez figuras geometri
     - h: Altura del cono circular recto
 
     #### Salida
-    Área de superficie de un cono circular recto
+    Área superficial del cono circular recto
 
     #### Ejemplo
 
-    - URL: localhost:9000/figurageométrica/right_circular_cone/surfacearea/3
-    ![This is an image]()
+    - URL: http://127.0.0.1:8080/right_circular_cone/surfacearea/8/13
+    ![This is an image](https://github.com/RodrigoSebasT/API-ICC/blob/main/static/cono%20circular%20recto%20areqa.PNG)
 
  - ### Volumen general de un cono truncado:
     #### URL
