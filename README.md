@@ -251,7 +251,7 @@
 
     #### Ejemplo
 
-    - URL: localhost:9000/figurageométrica/troncoDeCono/volumen/3/5/6
+    - URL: http://127.0.0.1:8080/troncoDeCono/volumen/4/5/4
     ![This is an image](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/tronco%20de%20cono%20volumen.PNG)
 
  - ### Volumen general de una pirámide cuadrada:
