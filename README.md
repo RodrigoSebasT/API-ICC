@@ -158,7 +158,7 @@ En esta primera version, decidimos implementar la API para diez figuras geometri
 
  - ### Volumen del toroide:
     #### URL
-    /figurageometrica/torus/volume/r/R
+    http://127.0.0.1:8080/torus/volume/:r/:R
 
     #### Parametros
     - r: Radio del tubo
@@ -174,7 +174,7 @@ En esta primera version, decidimos implementar la API para diez figuras geometri
 
 - ### Área superficial del toroide:
     #### URL
-    /figurageometrica/torus/surfacearea/r/R
+    http://127.0.0.1:8080/torus/surfacearea/:r/:R
 
     #### Parametros
     - r: Radio del tubo
@@ -191,7 +191,7 @@ En esta primera version, decidimos implementar la API para diez figuras geometri
 
  - ### Volumen de un cono o pirámide general:
     #### URL
-    /figurageometrica/general_cone_or_pyramid/volume/a/h
+    http://127.0.0.1:8080/general_cone_or_pyramid/volume/:a/:h
 
     #### Parametros
     - a: Área de la base del cono o pirámide general
@@ -207,7 +207,7 @@ En esta primera version, decidimos implementar la API para diez figuras geometri
 
  - ### Volumen general del cono circular recto:
     #### URL
-    /figurageometrica/right_circular_cone/volume/r/h
+    http://127.0.0.1:8080/right_circular_cone/volume/:r/:h
 
     #### Parametros
     - r: Radio del cono circular recto
@@ -223,7 +223,7 @@ En esta primera version, decidimos implementar la API para diez figuras geometri
 
 - ### Área de superficial del cono circular recto:
     #### URL
-    /figurageometrica/right_circular_cone/surfacearea/r/h
+    http://127.0.0.1:8080/right_circular_cone/surfacearea/:r/:h
 
     #### Parametros
     - r: Radio del cono circular recto
@@ -237,14 +237,14 @@ En esta primera version, decidimos implementar la API para diez figuras geometri
     - URL: http://127.0.0.1:8080/right_circular_cone/surfacearea/8/13
     ![This is an image](https://github.com/RodrigoSebasT/API-ICC/blob/main/static/cono%20circular%20recto%20areqa.PNG)
 
- - ### Volumen general de un cono truncado:
+ - ### Volumen general del tronco de cono:
     #### URL
-    /figurageometrica/frustum_of_a_cone/volume/r/R/h
+    http://127.0.0.1:8080/troncoDeCono/volumen/:r/:R/:h
 
     #### Parametros
-    - r: Radio superior del cono truncado
-    - R: Radio de la base del cono truncado
-    - h: Altura del cono truncado
+    - r: Radio de la base superior del tronco de cono
+    - R: Radio de la base inferior del tronco de cono
+    - h: Altura del tronco de cono
     
     #### Salida
     Volumen de un cono truncado
@@ -254,33 +254,33 @@ En esta primera version, decidimos implementar la API para diez figuras geometri
     - URL: http://127.0.0.1:8080/troncoDeCono/volumen/4/5/4
     ![This is an image](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/tronco%20de%20cono%20volumen.PNG)
 
-- ### Área de superficie de un cono truncado:
+- ### Área superficial del cono de tronco:
     #### URL
-    /figurageometrica/frustum_of_a_cone/surfacearea/r/R/s
+    /figurageometrica/frustum_of_a_cone/surfacearea/:r/:R/:s
 
     #### Parametros
-    - r: Radio superior del cono truncado
-    - R: Radio de la base del cono truncado
-    - s:  Altura inclinada del cono truncado
+    - r: Radio de la base superior del tronco de cono
+    - R: Radio de la base inferior del tronco de cono
+    - s: longitud del lado lateral del tronco de cono
 
     #### Salida
-    Área de superficie de un cono truncado
+    Área superficial del cono de tronco
 
     #### Ejemplo
 
     - URL: http://127.0.0.1:8080/troncoDeCono/surfacearea/5/12/4
     ![This is an image](https://github.com/RodrigoSebasT/API-ICC/blob/main/static/tronco%20de%20cono%20area%20superficial.PNG)
 
- - ### Volumen general de una pirámide cuadrada:
+ - ### Volumen de la pirámide cuadrangular:
     #### URL
-    /figurageometrica/square_pyramid/volume/s/h
+    http://127.0.0.1:8080/piramideCuadrangular/volumen/:s/:h
 
     #### Parametros
-    - s: Lado de la pirámide cuadrada
-    - h: altura de la pirámide cuadrada 
+    - s: Lado de la pirámide cuadradrangular
+    - h: altura de la pirámide cuadrangular 
     
     #### Salida
-    Volumen de una pirámide cuadrada
+    Volumen de la pirámide cuadrangular
 
     #### Ejemplo
 
@@ -289,44 +289,44 @@ En esta primera version, decidimos implementar la API para diez figuras geometri
 
 - ### Área de superficie de un square_pyramid:
     #### URL
-    /figurageometrica/square_pyramid/surfacearea/s/h
+    http://127.0.0.1:8080/piramideCuadrangular/surfacearea/:s/:h
 
     #### Parametros
-    - s: Lado de la pirámide cuadrada
-    - h: altura de la pirámide cuadrada
+    - s: Lado de la pirámide cuadrangular
+    - h: altura de la pirámide cuadrangular
 
     #### Salida
-    Área de superficie de la pirámide cuadrada
+    Área superficial de la pirámide cuadrangular
 
     #### Ejemplo
 
     - URL: http://127.0.0.1:8080/piramideCuadrangular/surfacearea/2/9
     ![This is an image](https://github.com/RodrigoSebasT/API-ICC/blob/main/static/piramide%20area%20superficial.PNG)
 
- - ### Volumen general de un tetrahedro regular:
+ - ### Volumen del tetraedro regular:
     #### URL
-    /figurageometrica/regular_tetrahedron/volume/s
+    http://127.0.0.1:8080/tetraedroRegular/volumen/:s
 
     #### Parametros
-    - s:  lado del tetrahedro regular
+    - s:  lado del tetraedro regular
     
     #### Salida
-    Volumen de un regular_tetrahedron
+    Volumen del tetraedro regular
 
     ##### Ejemplo
 
     - URL: http://127.0.0.1:8080/tetraedroRegular/volumen/10
     -![This is an image](https://github.com/RodrigoSebasT/API-ICC/blob/main/static/tetaedro%20regular%20volumen.PNG)
 
-- ### Área de superficie de un regular_tetrahedron:
+- ### Área superficial del tetraedro regular:
     #### URL
-    /figurageometrica/regular_tetrahedron/surfacearea/s
+    http://127.0.0.1:8080/tetraedroregular/surfacearea/:s
 
     #### Parametros
-    - s: Lado del tetrahedro regular
+    - s: Lado del tetraedro regular
 
     #### Salida
-    Área de superficie de un regular_tetrahedron
+    Área superficial del tetraedro regular
 
     #### Ejemplo
 
