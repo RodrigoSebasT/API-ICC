@@ -234,8 +234,8 @@
 
     #### Ejemplo
 
-    - URL: localhost:9000/figurageometrica/frustum_of_a_cone/volume/l/w/h
-    ![This is an image]()
+    - URL: http://127.0.0.1:8080/troncoDeCono/volumen/4/5/4
+    ![This is an image](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/tronco%20de%20cono%20volumen.PNG)
 
 - ### Área de superficie de un cono truncado:
     #### URL
@@ -251,8 +251,8 @@
 
     #### Ejemplo
 
-    - URL: http://127.0.0.1:8080/troncoDeCono/volumen/4/5/4
-    ![This is an image](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/tronco%20de%20cono%20volumen.PNG)
+    - URL: http://127.0.0.1:8080/troncoDeCono/surfacearea/5/12/4
+    ![This is an image](https://github.com/RodrigoSebasT/API-ICC/blob/main/static/tronco%20de%20cono%20area%20superficial.PNG)
 
  - ### Volumen general de una pirámide cuadrada:
     #### URL
