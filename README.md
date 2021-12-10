@@ -251,8 +251,8 @@
 
     #### Ejemplo
 
-    - URL: localhost:9000/figurageométrica/frustum_of_a_cone/surfacearea/3
-    ![This is an image]()
+    - URL: localhost:9000/figurageométrica/troncoDeCono/volumen/3/5/6
+    ![This is an image](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/tronco%20de%20cono%20volumen.PNG)
 
  - ### Volumen general de una pirámide cuadrada:
     #### URL
