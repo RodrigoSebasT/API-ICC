@@ -165,21 +165,21 @@
     ![This is an image](https://github.com/RodrigoSebasT/API-ICC/blob/main/static/toroide%20area.PNG)
 
 
- - ### Volumen general de un cono o pirámide:
+ - ### Volumen del cono o pirámide general:
     #### URL
     /general_cone_or_pyramid/volume/a/h
 
     #### Parametros
-    - a: Área de la base del cono o pirámide
-    - h: Altura del cono o piramide
+    - a: Área de la base del cono o pirámide general
+    - h: Altura del cono o pirámide general
     
     #### Salida
-    Volumen de un cono o piramide
+    Volumen del cono o pirámide general
 
     #### Ejemplo
 
-    - URL: http://127.0.0.1:8080/general_cone_or_pyramid/volume/l/w/h
-    ![This is an image]()
+    - URL: http://127.0.0.1:8080/general_cone_or_pyramid/volume/3/19
+    ![This is an image](https://github.com/RodrigoSebasT/API-ICC/blob/main/static/cono%20general%20o%20piramide%20volumen.PNG)
 
  - ### Volumen general de un cono circular recto:
     #### URL
