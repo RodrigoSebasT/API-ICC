@@ -64,7 +64,7 @@
     - h: Altura del solido rectangular
 
     #### Salida
-    Área superficial de un solido rectangular
+    Área de superficie de un solido rectangular
 
     #### Ejemplo
 
@@ -141,21 +141,21 @@
 
  - ### Volumen de un torus:
     #### URL
-    /figurageometrica/torus/volumen/r/R
+    /figurageometrica/torus/volume/r/R
 
     #### Parametros
     - r: Radio del tubo
     - R: Radio del torus
     
     #### Salida
-    Volumen de un toroide
+    Volumen de un torus
 
     #### Ejemplo
 
     - URL: localhost:9000/figurageometrica/torus/volume/l/w/h
     ![This is an image]()
 
-- ### Área superficial de un cilindro circular recto:
+- ### Área de superficie de un cilindro circular derecho:
     #### URL
     /figurageometrica/torus/surfacearea/r/R
 
@@ -267,8 +267,8 @@
 
     #### Ejemplo
 
-    - URL: localhost:9000/figurageometrica/square_pyramid/volume/l/w/h
-    ![This is an image]()
+    - URL: http://127.0.0.1:8080/piramideCuadrangular/volumen/5/4
+    ![This is an image](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/piramide%20cuadrangular%20volumen.PNG)
 
 - ### Área de superficie de un square_pyramid:
     #### URL
@@ -283,8 +283,8 @@
 
     #### Ejemplo
 
-    - URL: localhost:9000/figurageométrica/square_pyramid/surfacearea/3
-    ![This is an image]()
+    - URL: http://127.0.0.1:8080/piramideCuadrangular/surfacearea/2/9
+    ![This is an image](https://github.com/RodrigoSebasT/API-ICC/blob/main/static/piramide%20area%20superficial.PNG)
 
  - ### Volumen general de un tetrahedro regular:
     #### URL
@@ -298,10 +298,10 @@
 
     ##### Ejemplo
 
-    - URL: localhost:9000/figurageometrica/regular_tetrahedron/volume/l/w/h
-    -![This is an image]()
+    - URL: http://127.0.0.1:8080/tetraedroRegular/volumen/10
+    -![This is an image](https://github.com/RodrigoSebasT/API-ICC/blob/main/static/tetaedro%20regular%20volumen.PNG)
 
-- ### Área de superficie de un square_pyramid:
+- ### Área de superficie de un regular_tetrahedron:
     #### URL
     /figurageometrica/regular_tetrahedron/surfacearea/s
 
@@ -313,6 +313,6 @@
 
     #### Ejemplo
 
-    - URL: localhost:9000/figurageométrica/regular_tetrahedron/surfacearea/3
-    ![This is an image]()
+    - URL:  http://127.0.0.1:8080/tetraedroregular/surfacearea/10
+    ![This is an image](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/tetaedro%20regular%20area.PNG)
 
