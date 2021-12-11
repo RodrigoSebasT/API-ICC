@@ -700,7 +700,7 @@ def frustum_of_a_cone_volume(r,R,h):
         <body>
             <div class="container">
                 <img src="https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/troncoCono.jpg" alt="">
-                <p class="title">"""+"""r(2) = {}<br>r(1) = {}<br>h = {}<br><br>Donde:<br>r(1): radio de la base superior<br>r(2): radio de la base inferior<br>h: altura del tronco de cono<br><br>El volumene del tronco de cono es: {}</p>""".format(int(r),int(R),int(h),volumen)+"""</div>
+                <p class="title">"""+"""r(2) = {}<br>r(1) = {}<br>h = {}<br><br>Donde:<br>r(1): radio de la base superior<br>r(2): radio de la base inferior<br>h: altura del tronco de cono<br><br>El volumen del tronco de cono es: {}</p>""".format(int(r),int(R),int(h),volumen)+"""</div>
         </body>
         </html>"""
 
@@ -770,7 +770,7 @@ def frustum_of_a_cone_surfacearea(r,R,s):
         <body>
             <div class="container">
                 <img src="https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/troncoCono.jpg" alt="">
-                <p class="title">"""+"""r(2) = {}<br>r(1) = {}<br>s = {}<br><br>Donde:<br>r(1): radio de la base superior<br>r(2): radio de la base inferior<br>s: longitud del lado lateral del tronco de cono<br><br>El volumene del tronco de cono es: {}</p>""".format(int(r),int(R),int(s),surfacearea)+"""</div>
+                <p class="title">"""+"""r(2) = {}<br>r(1) = {}<br>s = {}<br><br>Donde:<br>r(1): radio de la base superior<br>r(2): radio de la base inferior<br>s: longitud del lado lateral del tronco de cono<br><br>El área superficial del tronco de cono es: {}</p>""".format(int(r),int(R),int(s),surfacearea)+"""</div>
         </body>
         </html>"""
 
@@ -1103,6 +1103,9 @@ def torus_volumen(r,R):
 
 
 
+
+
+
 #surfacearea torus
 @app.route('/toroide/surfacearea/<r>/<R>', methods=['GET'])
 def torus_surfacearea(r,R):
@@ -1231,7 +1234,7 @@ def regular_tetrahedron_volume(s):
 
 
 #surfacearea regular_tetrahedron
-@app.route('/tetraedroregular/surfacearea/<s>', methods=['GET'])
+@app.route('/tetraedroRegular/surfacearea/<s>', methods=['GET'])
 def regular_tetrahedron_surfacearea(s):
     surfacearea= (math.sqrt(3))*((int(s))**2)
     surfacearea = round(surfacearea,2)
