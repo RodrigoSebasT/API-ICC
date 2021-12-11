@@ -1,5 +1,4 @@
 from flask import Flask, render_template
-from math import pi
 import math
 
 app = Flask(__name__)
@@ -1104,9 +1103,6 @@ def torus_volumen(r,R):
 
 
 
-
-
-
 #surfacearea torus
 @app.route('/toroide/surfacearea/<r>/<R>', methods=['GET'])
 def torus_surfacearea(r,R):
@@ -1299,4 +1295,4 @@ def regular_tetrahedron_surfacearea(s):
 
 if __name__ == '__main__':
     app.secret_key = ".."
-    app.run(port=8080, threaded=True, host=('127.0.0.1'),debug=True)
+    app.run(port=8080, threaded=True, host=('127.0.0.1'))
