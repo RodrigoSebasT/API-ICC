@@ -1,5 +1,7 @@
 # Geometría Para Todos
+
 ## Descripción del proyecto:
+
 Creamos una API que ayuda a calcular el volumen y el área superficial de un figura geometrica del espacio.
 En esta primera version, decidimos implementar la API para diez figuras geometricas. 
 1. El cubo
@@ -20,7 +22,7 @@ Necesitas las siguientes herramientas para ejecutar nuestra API
 - Python 3.0+
 - Flask 2.0+
 
-Una vez instalado python3, ejecuta el siguiente comando
+Una vez instalado python 3.0+, ejecuta el siguiente comando
 
 `pip3 install flask`
 
@@ -50,13 +52,13 @@ Despues de ello, entra a nuestro proyecto y ejecútalo:
     - s: Lado del cubo
 
     #### Salida
-    Volumen del cubo
+    - Volumen del cubo
 
     #### Ejemplo
 
     - URL: http://127.0.0.1:8080/cubo/volumen/5
   
-    ![](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/cuboReadmeVolumen.png)
+    ![](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/cuboReadmeVolumen.png)
 
 - ### Área superficial de un cubo:
     #### URL
@@ -72,7 +74,7 @@ Despues de ello, entra a nuestro proyecto y ejecútalo:
 
     - URL: http://127.0.0.1:8080/cubo/surfacearea/5
     
-    ![This is an image](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/cuboReadmeArea.png)
+    ![](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/cuboReadmeArea.png)
 
 - ### Volumen de un sólido rectangular:
     #### URL
