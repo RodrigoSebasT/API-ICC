@@ -244,6 +244,7 @@ Despues de ello, entra a nuestro proyecto y ejecútalo:
     #### Ejemplo
 
     - URL: http://127.0.0.1:8080/conoCircularRecto/volumen/5/9
+
     ![](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/CCRV-3.png)
 
 - ### Área superficial de un cono circular recto:
@@ -260,6 +261,7 @@ Despues de ello, entra a nuestro proyecto y ejecútalo:
     #### Ejemplo
 
     - URL: http://127.0.0.1:8080/conoCircularRecto/surfacearea/5/9
+
     ![](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/CCRA-3.png)
 
  - ### Volumen de un tronco de cono:
