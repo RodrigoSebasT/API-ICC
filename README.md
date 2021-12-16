@@ -59,7 +59,7 @@ Despues de ello, entra a nuestro proyecto y ejecútalo:
 
     - URL: http://127.0.0.1:8080/cubo/volumen/5
   
-    ![](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/cuboReadmeVolumen.png)
+    ![](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/CV3.png)
 
 - ### Área superficial de un cubo:
     #### URL
@@ -75,7 +75,7 @@ Despues de ello, entra a nuestro proyecto y ejecútalo:
 
     - URL: http://127.0.0.1:8080/cubo/surfacearea/5
     
-    ![](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/cuboReadmeArea.png)
+    ![](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/CA3.png)
 
 - ### Volumen de un sólido rectangular:
     #### URL
@@ -93,7 +93,7 @@ Despues de ello, entra a nuestro proyecto y ejecútalo:
 
     - URL: http://127.0.0.1:8080/solidoRectangular/volumen/8/5/4
     
-    ![](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/RectanguloVolumenReadme.png)
+    ![](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/SRV3.png)
 
 - ### Área superficial de un sólido rectangular:
     #### URL
@@ -111,7 +111,7 @@ Despues de ello, entra a nuestro proyecto y ejecútalo:
 
     - URL: http://127.0.0.1:8080/solidoRectangular/surfacearea/8/5/4
     
-    ![](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/RectanguloAreaReadme.png)
+    ![](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/SRA3.png)
 
 - ### Volumen de una esfera:
     #### URL
@@ -127,7 +127,7 @@ Despues de ello, entra a nuestro proyecto y ejecútalo:
 
     - URL: http://127.0.0.1:8080/esfera/volumen/6
    
-    ![](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/VolumenEsferaReadme.png)
+    ![](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/EV3.png)
 
 - ### Área de superficie de una esfera:
     #### URL
@@ -143,7 +143,7 @@ Despues de ello, entra a nuestro proyecto y ejecútalo:
 
     - URL: http://127.0.0.1:8080/esfera/surfacearea/6
     
-    ![](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/AreaEsferaReadme.png)
+    ![](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/EA3.png)
 
  - ### Volumen de un cilindro circular recto:
     #### URL
@@ -160,7 +160,7 @@ Despues de ello, entra a nuestro proyecto y ejecútalo:
 
     - URL: http://127.0.0.1:8080/cilindroCircularRecto/volumen/8/4
     
-    ![](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/cilindro%20circular%20volumen.PNG)
+    ![](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/CCRV3.png)
 
 - ### Área superficial de un cilindro circular recto:
     #### URL
@@ -177,7 +177,7 @@ Despues de ello, entra a nuestro proyecto y ejecútalo:
 
     - URL: http://127.0.0.1:8080/cilindroCircularRecto/surfacearea/8/13
     
-    ![](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/cilindro%20circular%20area.PNG)
+    ![](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/CCRA3.png)
 
  - ### Volumen de un toroide:
     #### URL
@@ -194,7 +194,7 @@ Despues de ello, entra a nuestro proyecto y ejecútalo:
 
     - URL: http://127.0.0.1:8080/toroide/volumen/1/116
 
-    ![](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/toroide%20volumen.PNG)
+    ![](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/TV3.png)
 
 - ### Área superficial de un toroide:
     #### URL
@@ -211,7 +211,7 @@ Despues de ello, entra a nuestro proyecto y ejecútalo:
 
     - URL: http://127.0.0.1:8080/toroide/surfacearea/1/12
 
-    ![](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/toroide%20area.PNG)
+    ![](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/TA3.png)
 
  - ### Volumen de un cono o pirámide general:
     #### URL
@@ -228,7 +228,7 @@ Despues de ello, entra a nuestro proyecto y ejecútalo:
 
     - URL: http://127.0.0.1:8080/conoGeneraloPiramide/volumen/10/7
 
-    ![](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/conoGeneralVolumen.png)
+    ![](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/VCGP3.png)
 
  - ### Volumen de un cono circular recto:
     #### URL
@@ -244,7 +244,7 @@ Despues de ello, entra a nuestro proyecto y ejecútalo:
     #### Ejemplo
 
     - URL: http://127.0.0.1:8080/conoCircularRecto/volumen/5/9
-    ![](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/VolumenConoRegularReadme.png)
+    ![](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/CCRV-3.png)
 
 - ### Área superficial de un cono circular recto:
     #### URL
@@ -260,7 +260,7 @@ Despues de ello, entra a nuestro proyecto y ejecútalo:
     #### Ejemplo
 
     - URL: http://127.0.0.1:8080/conoCircularRecto/surfacearea/5/9
-    ![](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/AreaConoRegularReadme.png)
+    ![](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/CCRA-3.png)
 
  - ### Volumen de un tronco de cono:
     #### URL
@@ -278,7 +278,7 @@ Despues de ello, entra a nuestro proyecto y ejecútalo:
 
     - URL: http://127.0.0.1:8080/troncoDeCono/volumen/5/12/6
 
-    ![](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/voluTroncoReadme.png)
+    ![](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/TCV3.png)
 
 - ### Área superficial de un tronco de cono:
     #### URL
@@ -296,7 +296,7 @@ Despues de ello, entra a nuestro proyecto y ejecútalo:
 
     - URL: http://127.0.0.1:8080/troncoDeCono/surfacearea/5/12/6
 
-    ![](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/areatroncoConoReadme.png)
+    ![](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/TCA3.png)
 
  - ### Volumen de una pirámide cuadrangular:
     #### URL
@@ -313,7 +313,7 @@ Despues de ello, entra a nuestro proyecto y ejecútalo:
 
     - URL: http://127.0.0.1:8080/piramideCuadrangular/volumen/5/4
 
-    ![](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/piramide%20cuadrangular%20volumen.PNG)
+    ![](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/PCV3.png)
 
  - ### Área superficial de una pirámide cuadrangular:
     #### URL
@@ -330,7 +330,7 @@ Despues de ello, entra a nuestro proyecto y ejecútalo:
 
     - URL: http://127.0.0.1:8080/piramideCuadrangular/surfacearea/2/9
 
-    ![](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/piramide%20area%20superficial.PNG)
+    ![](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/PCA3.png)
 
  - ### Volumen del tetraedro regular:
     #### URL
@@ -346,7 +346,7 @@ Despues de ello, entra a nuestro proyecto y ejecútalo:
 
     - URL: http://127.0.0.1:8080/tetraedroRegular/volumen/10
   
-    ![](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/tetaedro%20regular%20volumen.PNG)
+    ![](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/TRV3.png)
 
 - ### Área superficial del tetraedro regular:
     #### URL
@@ -362,5 +362,5 @@ Despues de ello, entra a nuestro proyecto y ejecútalo:
 
     - URL:  http://127.0.0.1:8080/tetraedroRegular/surfacearea/10
 
-    ![](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/tetaedro%20regular%20area.PNG)
+    ![](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/TRA3.png)
 
