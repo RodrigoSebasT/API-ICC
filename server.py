@@ -19,17 +19,8 @@ def cube_volume(s):
     volumen = round(volumen,2)
     
     return """
-            <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Document</title>
-        </head>
-        <body>
-            <!DOCTYPE html>
-        <html lang="en">
+        <!DOCTYPE html>
+        <html lang="es">
         <head>
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Document</title>
@@ -81,16 +72,7 @@ def cube_surfacearea(s):
     surfacearea = round(surfacearea,2)
     return """
             <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Document</title>
-        </head>
-        <body>
-            <!DOCTYPE html>
-        <html lang="en">
+        <html lang="es">
         <head>
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Document</title>
@@ -142,16 +124,7 @@ def general_cone_or_pyramid_volume(a,h):
     volumen = round(volumen,2)
     return """
             <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Document</title>
-        </head>
-        <body>
-            <!DOCTYPE html>
-        <html lang="en">
+        <html lang="es">
         <head>
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Document</title>
@@ -204,16 +177,7 @@ def rectangular_solid_volume(l,w,h):
     volumen = round(volumen,2)
     return """
             <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Document</title>
-        </head>
-        <body>
-            <!DOCTYPE html>
-        <html lang="en">
+        <html lang="es">
         <head>
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Document</title>
@@ -274,16 +238,7 @@ def rectangular_solid_surfacearea(l,w,h):
     surfacearea = round(surfacearea,2)
     return """
                 <!DOCTYPE html>
-            <html lang="en">
-            <head>
-                <meta charset="UTF-8">
-                <meta http-equiv="X-UA-Compatible" content="IE=edge">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Document</title>
-            </head>
-            <body>
-                <!DOCTYPE html>
-            <html lang="en">
+            <html lang="es">
             <head>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <title>Document</title>
@@ -337,16 +292,7 @@ def right_circular_cone_volume(r,h):
     volumen = round(volumen,2)
     return """
             <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Document</title>
-        </head>
-        <body>
-            <!DOCTYPE html>
-        <html lang="en">
+        <html lang="es">
         <head>
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Document</title>
@@ -415,16 +361,7 @@ def right_circular_cone_surfacearea(r,h):
     surfacearea = round(surfacearea,2)
     return """
             <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Document</title>
-        </head>
-        <body>
-            <!DOCTYPE html>
-        <html lang="en">
+        <html lang="es">
         <head>
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Document</title>
@@ -479,16 +416,7 @@ def sphere_volume(r):
     volumen = round(volumen,2)
     return """
             <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Document</title>
-        </head>
-        <body>
-            <!DOCTYPE html>
-        <html lang="en">
+        <html lang="es">
         <head>
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Document</title>
@@ -555,16 +483,7 @@ def sphere_surfacearea(r):
     surfacearea= (math.pi)*4*((float(r))**2)
     surfacearea = round(surfacearea,2)
     return """<!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Document</title>
-        </head>
-        <body>
-            <!DOCTYPE html>
-        <html lang="en">
+        <html lang="es">
         <head>
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Document</title>
@@ -651,16 +570,7 @@ def frustum_of_a_cone_volume(r,R,h):
     volumen = ((math.pi)/3)*(((float(r))**2) + ((float(r))*(float(R))) + ((float(R))**2))*(float(h))
     volumen = round(volumen,2)
     return """<!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Document</title>
-        </head>
-        <body>
-            <!DOCTYPE html>
-        <html lang="en">
+        <html lang="es">
         <head>
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Document</title>
@@ -721,16 +631,7 @@ def frustum_of_a_cone_surfacearea(r,R,s):
     surfacearea= math.pi*((float(s)*(float(R) + float(r))) + ((float(r))**2) + ((float(R))**2))
     surfacearea = round(surfacearea,2)
     return """<!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Document</title>
-        </head>
-        <body>
-            <!DOCTYPE html>
-        <html lang="en">
+        <html lang="es">
         <head>
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Document</title>
@@ -787,16 +688,7 @@ def right_circular_cylinder_volume(r,h):
     volumen = ((float(r))**2)*(float(h))*(math.pi)
     volumen = round(volumen,2)
     return """<!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Document</title>
-        </head>
-        <body>
-            <!DOCTYPE html>
-        <html lang="en">
+        <html lang="es">
         <head>
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Document</title>
@@ -854,16 +746,7 @@ def right_circular_cylinder_surfacearea(r,h):
     surfacearea= (math.pi)*2*((float(r)*float(h)) + ((float(r))**2)) 
     surfacearea = round(surfacearea,2)
     return """<!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Document</title>
-        </head>
-        <body>
-            <!DOCTYPE html>
-        <html lang="en">
+        <html lang="es">
         <head>
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Document</title>
@@ -918,16 +801,7 @@ def square_pyramid_volume(s,h):
     volumen = (1/3)*((float(s))**2)*(float(h))
     volumen = round(volumen,2)
     return """<!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Document</title>
-        </head>
-        <body>
-            <!DOCTYPE html>
-        <html lang="en">
+        <html lang="es">
         <head>
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Document</title>
@@ -981,16 +855,7 @@ def square_pyramid_surfacearea(h,s):
     surfacearea= (float(s))*((float(s)) + (math.sqrt(((float(s))**2) + (4*((float(h))**2)))))
     surfacearea = round(surfacearea,2)
     return """<!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Document</title>
-        </head>
-        <body>
-            <!DOCTYPE html>
-        <html lang="en">
+        <html lang="es">
         <head>
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Document</title>
@@ -1046,16 +911,7 @@ def torus_volumen(r,R):
     volumen = ((float(r))**2)*(float(R))*((math.pi)**2)*2
     volumen = round(volumen,2)
     return """<!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Document</title>
-        </head>
-        <body>
-            <!DOCTYPE html>
-        <html lang="en">
+        <html lang="es">
         <head>
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Document</title>
@@ -1113,16 +969,7 @@ def torus_surfacearea(r,R):
     surfacearea= ((math.pi)**2)*4*(float(r))*(float(R))
     surfacearea = round(surfacearea,2)
     return """<!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Document</title>
-        </head>
-        <body>
-            <!DOCTYPE html>
-        <html lang="en">
+        <html lang="es">
         <head>
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Document</title>
@@ -1177,16 +1024,7 @@ def regular_tetrahedron_volume(s):
     volumen = (1/12)*(math.sqrt(2))*((float(s))**3)
     volumen = round(volumen,2)
     return """<!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Document</title>
-        </head>
-        <body>
-            <!DOCTYPE html>
-        <html lang="en">
+        <html lang="es">
         <head>
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Document</title>
@@ -1240,16 +1078,7 @@ def regular_tetrahedron_surfacearea(s):
     surfacearea= (math.sqrt(3))*((float(s))**2)
     surfacearea = round(surfacearea,2)
     return """<!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Document</title>
-        </head>
-        <body>
-            <!DOCTYPE html>
-        <html lang="en">
+        <html lang="es">
         <head>
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Document</title>
@@ -1299,4 +1128,4 @@ def regular_tetrahedron_surfacearea(s):
 
 if __name__ == '__main__':
     app.secret_key = ".."
-    app.run(port=8080, threaded=True, host=('127.0.0.1'),debug=True)
+    app.run(port=8080, threaded=True, host=('127.0.0.1'))
