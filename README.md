@@ -40,6 +40,7 @@ Despues de ello, entra a nuestro proyecto y ejecútalo:
 1. Rodrigo Sebastian Trujillo Mirano
 2. John Rodrigo Monroy Angeles
 3. Yovana Ramos Mamani
+4. Valentino Andres Vitteri Guerra
 
 
 ## Especificación del API
@@ -302,7 +303,7 @@ Despues de ello, entra a nuestro proyecto y ejecútalo:
     http://127.0.0.1:8080/piramideCuadrangular/volumen/:s/:h
 
     #### Parámetros
-    - s: Lado de la pirámide cuadradrangular
+    - s: Lado de la pirámide cuadrangular
     - h: Altura de la pirámide cuadrangular 
     
     #### Salida
@@ -349,7 +350,7 @@ Despues de ello, entra a nuestro proyecto y ejecútalo:
 
 - ### Área superficial del tetraedro regular:
     #### URL
-    http://127.0.0.1:8080/tetraedroregular/surfacearea/:s
+    http://127.0.0.1:8080/tetraedroRegular/surfacearea/:s
 
     #### Parámetros
     - s: Lado del tetraedro regular
@@ -359,7 +360,7 @@ Despues de ello, entra a nuestro proyecto y ejecútalo:
 
     #### Ejemplo
 
-    - URL:  http://127.0.0.1:8080/tetraedroregular/surfacearea/10
+    - URL:  http://127.0.0.1:8080/tetraedroRegular/surfacearea/10
 
     ![](https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/tetaedro%20regular%20area.PNG)
 

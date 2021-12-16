@@ -6,14 +6,15 @@ app = Flask(__name__)
 #INICIO DEL CODIGO
 
 #primera pagina
-@app.route('/<content>')
-def mostrar_interfaz(content):
-    return render_template(content)
+@app.route('/<inicio>')
+def mostrar_interfaz(inicio):
+    return render_template(inicio)
+
 
 #volumen del cubo
 @app.route('/cubo/volumen/<s>', methods=['GET'])
 def cube_volume(s):
-    lado = int(s)
+    lado = float(s)
     volumen = (lado)**3
     volumen = round(volumen,2)
     
@@ -75,7 +76,7 @@ def cube_volume(s):
 #area superficial del cubo
 @app.route('/cubo/surfacearea/<s>', methods=['GET'])
 def cube_surfacearea(s):
-    lado = int(s)
+    lado = float(s)
     surfacearea = 6*((lado)**2)
     surfacearea = round(surfacearea,2)
     return """
@@ -137,7 +138,7 @@ def cube_surfacearea(s):
 #volume general_cone_or_pyramid
 @app.route('/conoGeneraloPiramide/volumen/<a>/<h>', methods=['GET'])
 def general_cone_or_pyramid_volume(a,h):
-    volumen = (1/3)*int(a)*int(h)
+    volumen = (1/3)*float(a)*float(h)
     volumen = round(volumen,2)
     return """
             <!DOCTYPE html>
@@ -190,7 +191,7 @@ def general_cone_or_pyramid_volume(a,h):
         <body>
             <div class="container">
                 <img src="https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/cono.png" alt="">
-                <p class="title">"""+"""A = {}<br>h = {}<br><br>Donde:<br>A: área de la base del cono o pirámide general<br>h: altura de la pirámide o cono general<br><br>El volumen del cono o pirámide general es: {}</p>""".format(int(a),int(h),volumen)+"""</div>
+                <p class="title">"""+"""A = {}<br>h = {}<br><br>Donde:<br>A: área de la base del cono o pirámide general<br>h: altura de la pirámide o cono general<br><br>El volumen del cono o pirámide general es: {}</p>""".format(float(a),float(h),volumen)+"""</div>
         </body>
         </html>"""
 
@@ -199,7 +200,7 @@ def general_cone_or_pyramid_volume(a,h):
 #volume rectangular_solid
 @app.route('/solidoRectangular/volumen/<l>/<w>/<h>', methods=['GET'])
 def rectangular_solid_volume(l,w,h):
-    volumen = int(l)*int(w)*int(h)
+    volumen = float(l)*float(w)*float(h)
     volumen = round(volumen,2)
     return """
             <!DOCTYPE html>
@@ -253,7 +254,7 @@ def rectangular_solid_volume(l,w,h):
         <body>
             <div class="container">
                 <img src="https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/solido.png" alt="">
-                <p class="title">"""+"""a = {}<br>w = {}<br>h = {}<br><br>Donde:<br>a: largo del sólido rectangular<br>w: ancho del sólido rectangular<br>h: altura del sólido rectangular<br><br>El volumen del sólido rectangular es: {}</p>""".format(int(l),int(w),int(h),volumen)+"""</div>
+                <p class="title">"""+"""a = {}<br>w = {}<br>h = {}<br><br>Donde:<br>a: largo del sólido rectangular<br>w: ancho del sólido rectangular<br>h: altura del sólido rectangular<br><br>El volumen del sólido rectangular es: {}</p>""".format(float(l),float(w),float(h),volumen)+"""</div>
         </body>
         </html>"""
 
@@ -269,7 +270,7 @@ def rectangular_solid_volume(l,w,h):
 #surfacearea rectangular_solid
 @app.route('/solidoRectangular/surfacearea/<l>/<w>/<h>', methods=['GET'])
 def rectangular_solid_surfacearea(l,w,h):
-    surfacearea = 2*(int(l)*int(w) + int(h)*int(l) + int(w)*int(h))
+    surfacearea = 2*(float(l)*float(w) + float(h)*float(l) + float(w)*float(h))
     surfacearea = round(surfacearea,2)
     return """
                 <!DOCTYPE html>
@@ -323,7 +324,7 @@ def rectangular_solid_surfacearea(l,w,h):
             <body>
                 <div class="container">
                     <img src="https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/solido.png" alt="">
-                    <p class="title">"""+"""a = {}<br>w = {}<br>h = {}<br><br>Donde:<br>a: largo del sólido rectangular<br>w: ancho del sólido rectangular<br>h: altura del sólido rectangular<br><br>El área superficial del sólido rectangular es: {}</p>""".format(int(l),int(w),int(h),surfacearea)+"""</div>
+                    <p class="title">"""+"""a = {}<br>w = {}<br>h = {}<br><br>Donde:<br>a: largo del sólido rectangular<br>w: ancho del sólido rectangular<br>h: altura del sólido rectangular<br><br>El área superficial del sólido rectangular es: {}</p>""".format(float(l),float(w),float(h),surfacearea)+"""</div>
             </body>
             </html>"""
 
@@ -332,7 +333,7 @@ def rectangular_solid_surfacearea(l,w,h):
 #volume right_circular_cone
 @app.route('/conoCircularRecto/volumen/<r>/<h>', methods=['GET'])
 def right_circular_cone_volume(r,h):
-    volumen = (1/3)*((int(r))**2)*int(h)*(math.pi)
+    volumen = (1/3)*((float(r))**2)*float(h)*(math.pi)
     volumen = round(volumen,2)
     return """
             <!DOCTYPE html>
@@ -386,7 +387,7 @@ def right_circular_cone_volume(r,h):
         <body>
             <div class="container">
                 <img src="https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/copia.png" alt="">
-                <p class="title">"""+"""r = {}<br>h = {}<br><br>Donde:<br>r: radio del cono circular recto<br>h: altura del cono circular recto<br><br>El volumen del cono circular recto es: {}</p>""".format(int(r),int(h),volumen)+"""</div>
+                <p class="title">"""+"""r = {}<br>h = {}<br><br>Donde:<br>r: radio del cono circular recto<br>h: altura del cono circular recto<br><br>El volumen del cono circular recto es: {}</p>""".format(float(r),float(h),volumen)+"""</div>
         </body>
         </html>"""
 
@@ -410,7 +411,7 @@ def right_circular_cone_volume(r,h):
 #surfacearea right_circular_cone
 @app.route('/conoCircularRecto/surfacearea/<r>/<h>', methods=['GET'])
 def right_circular_cone_surfacearea(r,h):
-    surfacearea= ((math.pi)*(int(r))*(math.sqrt(((int(r))**2) + ((int(h))**2)))) + (math.pi*((int(r))**2))
+    surfacearea= ((math.pi)*(float(r))*(math.sqrt(((float(r))**2) + ((float(h))**2)))) + (math.pi*((float(r))**2))
     surfacearea = round(surfacearea,2)
     return """
             <!DOCTYPE html>
@@ -464,7 +465,7 @@ def right_circular_cone_surfacearea(r,h):
         <body>
             <div class="container">
                 <img src="https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/copia.png" alt="">
-                <p class="title">"""+"""r = {}<br>h = {}<br><br>Donde:<br>r: radio del cono circular recto<br>h: altura del cono circular recto<br><br>El área superficial del cono circular recto es: {}</p>""".format(int(r),int(h),surfacearea)+"""</div>
+                <p class="title">"""+"""r = {}<br>h = {}<br><br>Donde:<br>r: radio del cono circular recto<br>h: altura del cono circular recto<br><br>El área superficial del cono circular recto es: {}</p>""".format(float(r),float(h),surfacearea)+"""</div>
         </body>
         </html>"""
 
@@ -474,7 +475,7 @@ def right_circular_cone_surfacearea(r,h):
 #volume sphere
 @app.route('/esfera/volumen/<r>', methods=['GET'])
 def sphere_volume(r):
-    volumen = ((int(r))**3)*(4/3)*(math.pi)
+    volumen = ((float(r))**3)*(4/3)*(math.pi)
     volumen = round(volumen,2)
     return """
             <!DOCTYPE html>
@@ -528,7 +529,7 @@ def sphere_volume(r):
         <body>
             <div class="container">
                 <img src="https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/esfera.gif" alt="">
-                <p class="title">"""+"""r = {}<br><br>Donde:<br>r: radio de la esfera<br><br>El volumen de la esfera es: {}</p>""".format(int(r),volumen)+"""</div>
+                <p class="title">"""+"""r = {}<br><br>Donde:<br>r: radio de la esfera<br><br>El volumen de la esfera es: {}</p>""".format(float(r),volumen)+"""</div>
         </body>
         </html>"""
 
@@ -551,7 +552,7 @@ def sphere_volume(r):
 #surfacearea sphere
 @app.route('/esfera/surfacearea/<r>', methods=['GET'])
 def sphere_surfacearea(r):
-    surfacearea= (math.pi)*4*((int(r))**2)
+    surfacearea= (math.pi)*4*((float(r))**2)
     surfacearea = round(surfacearea,2)
     return """<!DOCTYPE html>
         <html lang="en">
@@ -604,7 +605,7 @@ def sphere_surfacearea(r):
         <body>
             <div class="container">
                 <img src="https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/esfera.gif" alt="">
-                <p class="title">"""+"""r = {}<br><br>Donde:<br>r: radio de la esfera<br><br>El área superficial de la esfera es: {}</p>""".format(int(r),surfacearea)+"""</div>
+                <p class="title">"""+"""r = {}<br><br>Donde:<br>r: radio de la esfera<br><br>El área superficial de la esfera es: {}</p>""".format(float(r),surfacearea)+"""</div>
         </body>
         </html>"""
 
@@ -647,7 +648,7 @@ def sphere_surfacearea(r):
 #volume frustum_of_a_cone  
 @app.route('/troncoDeCono/volumen/<r>/<R>/<h>', methods=['GET'])
 def frustum_of_a_cone_volume(r,R,h):
-    volumen = ((math.pi)/3)*(((int(r))**2) + ((int(r))*(int(R))) + ((int(R))**2))*(int(h))
+    volumen = ((math.pi)/3)*(((float(r))**2) + ((float(r))*(float(R))) + ((float(R))**2))*(float(h))
     volumen = round(volumen,2)
     return """<!DOCTYPE html>
         <html lang="en">
@@ -700,7 +701,7 @@ def frustum_of_a_cone_volume(r,R,h):
         <body>
             <div class="container">
                 <img src="https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/troncoCono.jpg" alt="">
-                <p class="title">"""+"""r(2) = {}<br>r(1) = {}<br>h = {}<br><br>Donde:<br>r(1): radio de la base superior<br>r(2): radio de la base inferior<br>h: altura del tronco de cono<br><br>El volumen del tronco de cono es: {}</p>""".format(int(r),int(R),int(h),volumen)+"""</div>
+                <p class="title">"""+"""r(2) = {}<br>r(1) = {}<br>h = {}<br><br>Donde:<br>r(1): radio de la base superior<br>r(2): radio de la base inferior<br>h: altura del tronco de cono<br><br>El volumen del tronco de cono es: {}</p>""".format(float(r),float(R),float(h),volumen)+"""</div>
         </body>
         </html>"""
 
@@ -717,7 +718,7 @@ def frustum_of_a_cone_volume(r,R,h):
 #surface frustum_of_a_cone
 @app.route('/troncoDeCono/surfacearea/<r>/<R>/<s>', methods=['GET'])
 def frustum_of_a_cone_surfacearea(r,R,s):
-    surfacearea= math.pi*((int(s)*(int(R) + int(r))) + ((int(r))**2) + ((int(R))**2))
+    surfacearea= math.pi*((float(s)*(float(R) + float(r))) + ((float(r))**2) + ((float(R))**2))
     surfacearea = round(surfacearea,2)
     return """<!DOCTYPE html>
         <html lang="en">
@@ -770,7 +771,7 @@ def frustum_of_a_cone_surfacearea(r,R,s):
         <body>
             <div class="container">
                 <img src="https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/troncoCono.jpg" alt="">
-                <p class="title">"""+"""r(2) = {}<br>r(1) = {}<br>s = {}<br><br>Donde:<br>r(1): radio de la base superior<br>r(2): radio de la base inferior<br>s: longitud del lado lateral del tronco de cono<br><br>El área superficial del tronco de cono es: {}</p>""".format(int(r),int(R),int(s),surfacearea)+"""</div>
+                <p class="title">"""+"""r(2) = {}<br>r(1) = {}<br>s = {}<br><br>Donde:<br>r(1): radio de la base superior<br>r(2): radio de la base inferior<br>s: longitud del lado lateral del tronco de cono<br><br>El área superficial del tronco de cono es: {}</p>""".format(float(r),float(R),float(s),surfacearea)+"""</div>
         </body>
         </html>"""
 
@@ -783,7 +784,7 @@ def frustum_of_a_cone_surfacearea(r,R,s):
 #volume right_circular_cylinder
 @app.route('/cilindroCircularRecto/volumen/<r>/<h>', methods=['GET'])
 def right_circular_cylinder_volume(r,h):
-    volumen = ((int(r))**2)*(int(h))*(math.pi)
+    volumen = ((float(r))**2)*(float(h))*(math.pi)
     volumen = round(volumen,2)
     return """<!DOCTYPE html>
         <html lang="en">
@@ -836,7 +837,7 @@ def right_circular_cylinder_volume(r,h):
         <body>
             <div class="container">
                 <img src="https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/cilindroo.png" alt="">
-                <p class="title">"""+"""r = {}<br>h = {}<br><br>Donde:<br>r: radio de la base del cilindro circular recto<br>h: altura del cilindro circular recto<br><br>El volumen del cilindro circular recto es: {}</p>""".format(int(r),int(h),volumen)+"""</div>
+                <p class="title">"""+"""r = {}<br>h = {}<br><br>Donde:<br>r: radio de la base del cilindro circular recto<br>h: altura del cilindro circular recto<br><br>El volumen del cilindro circular recto es: {}</p>""".format(float(r),float(h),volumen)+"""</div>
         </body>
         </html>"""
 
@@ -850,7 +851,7 @@ def right_circular_cylinder_volume(r,h):
 #surfacearea right_circular_cylinder
 @app.route('/cilindroCircularRecto/surfacearea/<r>/<h>', methods=['GET'])
 def right_circular_cylinder_surfacearea(r,h):
-    surfacearea= (math.pi)*2*((int(r)*int(h)) + ((int(r))**2)) 
+    surfacearea= (math.pi)*2*((float(r)*float(h)) + ((float(r))**2)) 
     surfacearea = round(surfacearea,2)
     return """<!DOCTYPE html>
         <html lang="en">
@@ -903,7 +904,7 @@ def right_circular_cylinder_surfacearea(r,h):
         <body>
             <div class="container">
                 <img src="https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/cilindroo.png" alt="">
-                <p class="title">"""+"""r = {}<br>h = {}<br><br>Donde:<br>r: radio de la base del cilindro circular recto<br>h: altura del cilindro circular recto<br><br>El área superficial del cilindro circular recto es: {}</p>""".format(int(r),int(h),surfacearea)+"""</div>
+                <p class="title">"""+"""r = {}<br>h = {}<br><br>Donde:<br>r: radio de la base del cilindro circular recto<br>h: altura del cilindro circular recto<br><br>El área superficial del cilindro circular recto es: {}</p>""".format(float(r),float(h),surfacearea)+"""</div>
         </body>
         </html>"""
 
@@ -914,7 +915,7 @@ def right_circular_cylinder_surfacearea(r,h):
 #volume square_pyramid
 @app.route('/piramideCuadrangular/volumen/<s>/<h>', methods=['GET'])
 def square_pyramid_volume(s,h):
-    volumen = (1/3)*((int(s))**2)*(int(h))
+    volumen = (1/3)*((float(s))**2)*(float(h))
     volumen = round(volumen,2)
     return """<!DOCTYPE html>
         <html lang="en">
@@ -967,7 +968,7 @@ def square_pyramid_volume(s,h):
         <body>
             <div class="container">
                 <img src="https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/piramideRectangular.png" alt="">
-                <p class="title">"""+"""l = {}<br>h = {}<br><br>Donde:<br>l: longitud del lado de la base de la pirámide<br>h: altura de la pirámide<br><br>El volumen de la pirámide cuadrangular es: {}</p>""".format(int(s),int(h),volumen)+"""</div>
+                <p class="title">"""+"""l = {}<br>h = {}<br><br>Donde:<br>l: longitud del lado de la base de la pirámide<br>h: altura de la pirámide<br><br>El volumen de la pirámide cuadrangular es: {}</p>""".format(float(s),float(h),volumen)+"""</div>
         </body>
         </html>"""
 
@@ -977,7 +978,7 @@ def square_pyramid_volume(s,h):
 #surfacearea square_pyramid
 @app.route('/piramideCuadrangular/surfacearea/<s>/<h>', methods=['GET'])
 def square_pyramid_surfacearea(h,s):
-    surfacearea= (int(s))*((int(s)) + (math.sqrt(((int(s))**2) + (4*((int(h))**2)))))
+    surfacearea= (float(s))*((float(s)) + (math.sqrt(((float(s))**2) + (4*((float(h))**2)))))
     surfacearea = round(surfacearea,2)
     return """<!DOCTYPE html>
         <html lang="en">
@@ -1030,7 +1031,7 @@ def square_pyramid_surfacearea(h,s):
         <body>
             <div class="container">
                 <img src="https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/piramideRectangular.png" alt="">
-                <p class="title">"""+"""l = {}<br>h = {}<br><br>Donde:<br>l: longitud del lado de la base de la pirámide<br>h: altura de la pirámide<br><br>El área superficial de la pirámide cuadrangular es: {}</p>""".format(int(s),int(h),surfacearea)+"""</div>
+                <p class="title">"""+"""l = {}<br>h = {}<br><br>Donde:<br>l: longitud del lado de la base de la pirámide<br>h: altura de la pirámide<br><br>El área superficial de la pirámide cuadrangular es: {}</p>""".format(float(s),float(h),surfacearea)+"""</div>
         </body>
         </html>"""
 
@@ -1042,7 +1043,7 @@ def square_pyramid_surfacearea(h,s):
 #volume torus
 @app.route('/toroide/volumen/<r>/<R>', methods=['GET'])
 def torus_volumen(r,R):
-    volumen = ((int(r))**2)*(int(R))*((math.pi)**2)*2
+    volumen = ((float(r))**2)*(float(R))*((math.pi)**2)*2
     volumen = round(volumen,2)
     return """<!DOCTYPE html>
         <html lang="en">
@@ -1095,7 +1096,7 @@ def torus_volumen(r,R):
         <body>
             <div class="container">
                 <img src="https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/toro.png" alt="">
-                <p class="title">"""+"""r = {}<br>R = {}<br><br>Donde:<br>r: radio del tubo<br>R: radio del toroide<br><br>El volumen del toroide es: {}</p>""".format(int(r),int(R),volumen)+"""</div>
+                <p class="title">"""+"""r = {}<br>R = {}<br><br>Donde:<br>r: radio del tubo<br>R: radio del toroide<br><br>El volumen del toroide es: {}</p>""".format(float(r),float(R),volumen)+"""</div>
         </body>
         </html>"""
 
@@ -1109,7 +1110,7 @@ def torus_volumen(r,R):
 #surfacearea torus
 @app.route('/toroide/surfacearea/<r>/<R>', methods=['GET'])
 def torus_surfacearea(r,R):
-    surfacearea= ((math.pi)**2)*4*(int(r))*(int(R))
+    surfacearea= ((math.pi)**2)*4*(float(r))*(float(R))
     surfacearea = round(surfacearea,2)
     return """<!DOCTYPE html>
         <html lang="en">
@@ -1162,7 +1163,7 @@ def torus_surfacearea(r,R):
         <body>
             <div class="container">
                 <img src="https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/toro.png" alt="">
-                <p class="title">"""+"""r = {}<br>R = {}<br><br>Donde:<br>r: radio del tubo<br>R: radio del toroide<br><br>El área superficial del toroide es: {}</p>""".format(int(r),int(R),surfacearea)+"""</div>
+                <p class="title">"""+"""r = {}<br>R = {}<br><br>Donde:<br>r: radio del tubo<br>R: radio del toroide<br><br>El área superficial del toroide es: {}</p>""".format(float(r),float(R),surfacearea)+"""</div>
         </body>
         </html>"""
 
@@ -1173,7 +1174,7 @@ def torus_surfacearea(r,R):
 #volume regular_tetrahedron
 @app.route('/tetraedroRegular/volumen/<s>', methods=['GET'])
 def regular_tetrahedron_volume(s):
-    volumen = (1/12)*(math.sqrt(2))*((int(s))**3)
+    volumen = (1/12)*(math.sqrt(2))*((float(s))**3)
     volumen = round(volumen,2)
     return """<!DOCTYPE html>
         <html lang="en">
@@ -1226,7 +1227,7 @@ def regular_tetrahedron_volume(s):
         <body>
             <div class="container">
                 <img src="https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/tetraedro.png" alt="">
-                <p class="title">"""+"""s = {}<br><br>Donde:<br>s: lado del tetraedro regular<br><br>El volumen del tetraedro regular es: {}</p>""".format(int(s),volumen)+"""</div>
+                <p class="title">"""+"""s = {}<br><br>Donde:<br>s: lado del tetraedro regular<br><br>El volumen del tetraedro regular es: {}</p>""".format(float(s),volumen)+"""</div>
         </body>
         </html>"""
 
@@ -1236,7 +1237,7 @@ def regular_tetrahedron_volume(s):
 #surfacearea regular_tetrahedron
 @app.route('/tetraedroRegular/surfacearea/<s>', methods=['GET'])
 def regular_tetrahedron_surfacearea(s):
-    surfacearea= (math.sqrt(3))*((int(s))**2)
+    surfacearea= (math.sqrt(3))*((float(s))**2)
     surfacearea = round(surfacearea,2)
     return """<!DOCTYPE html>
         <html lang="en">
@@ -1288,7 +1289,7 @@ def regular_tetrahedron_surfacearea(s):
         <body>
             <div class="container">
                 <img src="https://raw.githubusercontent.com/RodrigoSebasT/API-ICC/main/static/images/tetraedro.png" alt="">
-                <p class="title">"""+"""s = {}<br><br>Donde:<br>s: lado del tetraedro regular<br><br>El área superficial del tetraedro regular es: {}</p>""".format(int(s),surfacearea)+"""</div>
+                <p class="title">"""+"""s = {}<br><br>Donde:<br>s: lado del tetraedro regular<br><br>El área superficial del tetraedro regular es: {}</p>""".format(float(s),surfacearea)+"""</div>
         </body>
         </html>"""
 
@@ -1298,4 +1299,4 @@ def regular_tetrahedron_surfacearea(s):
 
 if __name__ == '__main__':
     app.secret_key = ".."
-    app.run(port=8080, threaded=True, host=('127.0.0.1'))
+    app.run(port=8080, threaded=True, host=('127.0.0.1'),debug=True)
